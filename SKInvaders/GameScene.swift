@@ -62,6 +62,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let kInvaderFiredBulletName = "invaderFiredBullet"
     let kBulletSize = CGSize(width: 4, height: 8)
     
+    // End Game Tracking
+    let kMinInvaderBottomHeight: Float = 32.0
+    var gameEnding: Bool = false
+    
     // Movement, interactions
     // Inavaders Movements
     enum InvaderMovementDirection {
@@ -83,11 +87,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // 1: Invaders begin by moving to the right.
     var invaderMovementDirection: InvaderMovementDirection = .right
     
+  
     //2:  Invaders haven’t moved yet, so set the time to zero.
     var timeOfLastMove: TimeInterval = 0.0
-    
+ 
     //3:  Invaders take 1 second for each move. Each step left, right or down takes 1 second.
-    let timePerMove: TimeInterval = 1.0
+    var timePerMove: TimeInterval = 1.0
+ 
     
     
   
@@ -147,9 +153,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.backgroundColor = SKColor.black
   }
   
-  
+    // Textures
+    func loadInvaderTextures(ofType invaderType: InvaderType)->[SKTexture] {
+        
+        var prefix: String
+        switch(invaderType) {
+        case .a:
+            prefix = "InvaderA"
+        case .b:
+            prefix = "InvaderB"
+        case .c:
+            prefix = "InvaderC"
+
+        }
+        
+       // Loads a pair of sprite images — InvaderA_00.png and InvaderA_01.png — for each invader type and creates SKTexture objects from them.
+        return [SKTexture(imageNamed: String(format:"%@_00.png", prefix)),
+            SKTexture(imageNamed: String(format: "%@_01.png", prefix))]
+
+    }
+
+    
     //// INVADERS creation and Setup
     // create
+    /*
    func makeInvader(ofType invaderType: InvaderType) -> SKNode {
  
     /*  1:  Declare and set the baseOrigin constant (representing the origin of where to start spawning areas
@@ -182,6 +209,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     return invader
     }
     
+ */
+    
+    
+    func makeInvader(ofType invaderType: InvaderType)-> SKNode {
+        
+        let invaderTextures = loadInvaderTextures(ofType: invaderType)
+        
+       // Uses the first such texture as the sprite’s base image.
+    let invader = SKSpriteNode(texture: invaderTextures[0])
+        invader.name = InvaderType.name
+        
+        // Animates these two images in a continuous animation loop.
+        invader.run(SKAction.repeatForever(SKAction.animate(with: invaderTextures, timePerFrame: timePerMove)))
+        
+        
+        //invaders' bitmasks setup
+        invader.physicsBody = SKPhysicsBody( rectangleOf: invader.frame.size)
+        invader.physicsBody!.isDynamic = false
+        invader.physicsBody!.categoryBitMask = kInvaderCategory
+        invader.physicsBody!.contactTestBitMask = 0x0
+        invader.physicsBody!.collisionBitMask = 0x0
+        return invader
+    }
     
         func setupInvaders() {
         
@@ -324,7 +374,9 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
     
     
     func makeShip() -> SKNode {
-        let ship = SKSpriteNode(color: SKColor.green, size: kShipSize)
+     //   let ship = SKSpriteNode(color: SKColor.green, size: kShipSize)
+       
+        let ship = SKSpriteNode(imageNamed: "Ship.png")
         ship.name = kShipName
         
         // Physics
@@ -468,6 +520,9 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
     
     fireInvaderBullets(forUpdate: currentTime)
     
+    if isGameOver() {
+        endGame()
+    }
     
   }
     
@@ -733,7 +788,44 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
   // Physics Contact Helpers
   
   // Game End Helpers
+    
+    func isGameOver() -> Bool {
+        //1:  
+        let invader = childNode(withName: InvaderType.name)
+        
+        //2:  
+        var invaderTooLow = false
+        enumerateChildNodes(withName: InvaderType.name) {
+            node, stop in
+            
+            if (Float(node.frame.minY) <= self.kMinInvaderBottomHeight) {
+                invaderTooLow = true
+                stop.pointee = true
+            }
+        }
+        
+        //3:  
+        let ship = childNode(withName: kShipName)
+        
+        //4:
+        return invader == nil || invaderTooLow || ship == nil
+    }
   
+    
+    func endGame() {
+        //1:  
+        if !gameEnding {
+            gameEnding = true
+            
+            //2: 
+            motionManager.stopAccelerometerUpdates()
+            
+            //3: 
+            let gameOverScene: GameOverScene = GameOverScene(size: size)
+            
+            view?.presentScene(gameOverScene, transition: SKTransition.doorsOpenHorizontal(withDuration: 1.0))
+        }
+    }
 
 }
 

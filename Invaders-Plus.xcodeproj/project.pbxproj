@@ -34,6 +34,7 @@
 		CDF07A1A1975510100FFAB46 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF07A191975510100FFAB46 /* GameOverScene.swift */; };
 		F6289D2B1DE10AA700ABFF9E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6289D2A1DE10AA700ABFF9E /* Settings.swift */; };
 		F6289D2D1DE10B8100ABFF9E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6289D2C1DE10B8100ABFF9E /* SettingsViewController.swift */; };
+		F6289D2F1DE157EA00ABFF9E /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = F6289D2E1DE157EA00ABFF9E /* Assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		CDF07A191975510100FFAB46 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		F6289D2A1DE10AA700ABFF9E /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F6289D2C1DE10B8100ABFF9E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F6289D2E1DE157EA00ABFF9E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = SKInvaders/Assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		CDF079C11975428800FFAB46 = {
 			isa = PBXGroup;
 			children = (
+				F6289D2E1DE157EA00ABFF9E /* Assets */,
 				CDF079CC1975428800FFAB46 /* Invaders */,
 				CDF079CB1975428800FFAB46 /* Products */,
 			);
@@ -101,11 +104,11 @@
 				CDF079F01975453100FFAB46 /* Assets */,
 				CDF079CF1975428800FFAB46 /* AppDelegate.swift */,
 				CDF079D31975428800FFAB46 /* GameScene.swift */,
-				F6289D2A1DE10AA700ABFF9E /* Settings.swift */,
 				CDF079D51975428800FFAB46 /* GameViewController.swift */,
 				CDF07A191975510100FFAB46 /* GameOverScene.swift */,
 				CDF079D71975428800FFAB46 /* Main.storyboard */,
 				F6289D2C1DE10B8100ABFF9E /* SettingsViewController.swift */,
+				F6289D2A1DE10AA700ABFF9E /* Settings.swift */,
 				CDF079DA1975428800FFAB46 /* Images.xcassets */,
 				CDF079CD1975428800FFAB46 /* Supporting Files */,
 			);
@@ -233,6 +236,7 @@
 				CDF07A0E1975453100FFAB46 /* InvaderA_01@2x.png in Resources */,
 				CDF07A111975453100FFAB46 /* InvaderB_01.png in Resources */,
 				CDF07A161975453100FFAB46 /* InvaderC_01@2x.png in Resources */,
+				F6289D2F1DE157EA00ABFF9E /* Assets in Resources */,
 				CDF07A061975453100FFAB46 /* AssetLicensingNotes.txt in Resources */,
 				CDF07A131975453100FFAB46 /* InvaderC_00.png in Resources */,
 				CDF07A151975453100FFAB46 /* InvaderC_01.png in Resources */,
