@@ -1,4 +1,4 @@
-/**
+/**  Basic Game:
  * Copyright (c) 2016 Razeware LLC
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -18,7 +18,10 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ * 
+ * MODIFICATIONS: Copyright (c) 2016 David Moreland
  */
+
 
 import SpriteKit
 import CoreMotion
@@ -31,20 +34,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let motionManager = CMMotionManager()
     
   // Physics Bit Masks
-    let kInvaderCategory: UInt32 = 0x1 << 0
+  // Moved to 'InvaderController' --  let kInvaderCategory: UInt32 = 0x1 << 0
     let kShipFiredBulletCategory : UInt32 = 0x1 << 1
     let kShipCategory: UInt32 = 0x1 << 2
     let kSceneEdgeCategory: UInt32 = 0x1 << 3
-    let kInvaderFiredBulletCategory: UInt32 = 0x1 << 4
+   // Moved to 'InvaderController' --  let kInvaderFiredBulletCategory: UInt32 = 0x1 << 4
     
     
     // Object Lifecycle Management
     // Enum - Types of Invaders
+/* Moved to Invader 'Model'
     enum InvaderType {
         case a
         case b
         case c
-        
+ 
         static var size: CGSize {
             return CGSize(width: 24, height: 24)
         }
@@ -52,6 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             return "invader"
         }
     }
+*/
     
     enum BulletType {
         case shipFired
@@ -90,11 +95,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
     //2:  Invaders haven’t moved yet, so set the time to zero.
     var timeOfLastMove: TimeInterval = 0.0
- 
+
+
+ /*  Moved to 'Invader' */
     //3:  Invaders take 1 second for each move. Each step left, right or down takes 1 second.
     var timePerMove: TimeInterval = 1.0
  
-    
+
     
   
  
@@ -153,6 +160,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.backgroundColor = SKColor.black
   }
   
+    /* Moved to 'Invader'
     // Textures
     func loadInvaderTextures(ofType invaderType: InvaderType)->[SKTexture] {
         
@@ -173,43 +181,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
 
-    
-    //// INVADERS creation and Setup
-    // create
-    /*
-   func makeInvader(ofType invaderType: InvaderType) -> SKNode {
- 
-    /*  1:  Declare and set the baseOrigin constant (representing the origin of where to start spawning areas
-     – 1/3 from the right of the screen, and 1/2 from the bottom of the screen) and loop over the rows.
- */
-    
- var invaderColor: SKColor
-        
-        switch(invaderType) {
-        case .a:
-            invaderColor = SKColor.red
-        case .b:
-            invaderColor = SKColor.green
-        case .c:
-            invaderColor = SKColor.blue
-        }
-        
-/* Choose a single InvaderType for all invaders in this row based on the row number.
- */
-        let invader = SKSpriteNode(color: invaderColor, size: InvaderType.size)
-        invader.name = InvaderType.name
-    
-    // Collision Detection
-    invader.physicsBody = SKPhysicsBody(rectangleOf: invader.frame.size)
-    invader.physicsBody!.isDynamic = false
-    invader.physicsBody!.categoryBitMask = kInvaderCategory
-    invader.physicsBody!.contactTestBitMask = 0x0
-    invader.physicsBody!.collisionBitMask = 0x0
-    
-    return invader
-    }
-    
- */
     
     
     func makeInvader(ofType invaderType: InvaderType)-> SKNode {
@@ -232,6 +203,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         invader.physicsBody!.collisionBitMask = 0x0
         return invader
     }
+ */
+    
+    
     
         func setupInvaders() {
         
@@ -241,7 +215,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for row in 0..<kInvaderRowCount {
             
             // 2: Choose a single InvaderType for all invaders in this row based on the row number.
-            var invaderType: InvaderType
+            var invaderType: Invader.InvaderType
             
             if row % 3 == 0 {
                 invaderType = .a
@@ -252,7 +226,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             // 3: Do some math to figure out where the first invader in this row should be positioned.
-            let invaderPositionY = CGFloat(row) * (InvaderType.size.height * 2) + baseOrigin.y
+            let invaderPositionY = CGFloat(row) * (Invader.InvaderType.size.height * 2) + baseOrigin.y
             
             var invaderPosition = CGPoint(x: baseOrigin.x, y: invaderPositionY)
             
@@ -260,17 +234,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             for _ in 1..<kInvaderRowCount {
                 
                 //5: Create an invader for the current row and column and add it to the scene.
-                let invader = makeInvader(ofType: invaderType)
+                let invader = Invader().makeInvader(ofType: invaderType)
                 invader.position = invaderPosition
                 addChild(invader)
                 
                 //6: Update the invaderPosition so that it’s correct for the next invader.
-                invaderPosition = CGPoint(x: invaderPosition.x + InvaderType.size.width + kInvaderGridSpacing.width,
+                invaderPosition = CGPoint(x: invaderPosition.x + Invader.InvaderType.size.width + kInvaderGridSpacing.width,
                                           y:invaderPositionY)
                 
             }
          }
     }
+ 
+
     
 // Bullets
     
@@ -330,7 +306,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
 /*    //2: Recall that your scene holds all of the invaders as child nodes; you added them to the scene using addChild() in setupInvaders() identifying each invader by its name property. Invoking enumerateChildNodes(withName:using:) only loops over the invaders because they’re named kInvaderName; this makes the loop skip your ship and the HUDs. The guts of the block moves the invaders 10 pixels either right, left or down depending on the value of invaderMovementDirection.
  */
     
- enumerateChildNodes(withName: InvaderType.name) {
+ enumerateChildNodes(withName: Invader.InvaderType.name) {
         node, stop in
         switch self.invaderMovementDirection {
         case .right:
@@ -570,7 +546,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
         
         //2:  Loop over all the invaders in the scene and invoke the block with the invader as an argument.
         
-        enumerateChildNodes(withName: InvaderType.name) {
+        enumerateChildNodes(withName: Invader.InvaderType.name) {
             node, stop in
             switch self.invaderMovementDirection {
             case .right:
@@ -682,7 +658,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             var allInvaders = [SKNode]()
             
             //2: 
-            enumerateChildNodes(withName: InvaderType.name) {
+            enumerateChildNodes(withName: Invader.InvaderType.name) {
                 node, stop in allInvaders.append(node)
                 
             }
@@ -768,7 +744,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
         }
         
         
-        } else if nodeNames.contains(InvaderType.name) && nodeNames.contains(kShipFiredBulletName) {
+        } else if nodeNames.contains(Invader.InvaderType.name) && nodeNames.contains(kShipFiredBulletName) {
             // 4:  
             run(SKAction.playSoundFileNamed("InvaderHit.wav", waitForCompletion: false))
             contact.bodyA.node!.removeFromParent()
@@ -791,11 +767,11 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
     
     func isGameOver() -> Bool {
         //1:  
-        let invader = childNode(withName: InvaderType.name)
+        let invader = childNode(withName: Invader.InvaderType.name)
         
         //2:  
         var invaderTooLow = false
-        enumerateChildNodes(withName: InvaderType.name) {
+        enumerateChildNodes(withName: Invader.InvaderType.name) {
             node, stop in
             
             if (Float(node.frame.minY) <= self.kMinInvaderBottomHeight) {

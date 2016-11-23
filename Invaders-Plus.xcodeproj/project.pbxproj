@@ -35,6 +35,8 @@
 		F6289D2B1DE10AA700ABFF9E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6289D2A1DE10AA700ABFF9E /* Settings.swift */; };
 		F6289D2D1DE10B8100ABFF9E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6289D2C1DE10B8100ABFF9E /* SettingsViewController.swift */; };
 		F6289D2F1DE157EA00ABFF9E /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = F6289D2E1DE157EA00ABFF9E /* Assets */; };
+		F63C736A1DE5F16F00E98DC3 /* InvaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C73691DE5F16F00E98DC3 /* InvaderController.swift */; };
+		F63C736C1DE5F25200E98DC3 /* Invader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C736B1DE5F25200E98DC3 /* Invader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		F6289D2A1DE10AA700ABFF9E /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F6289D2C1DE10B8100ABFF9E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F6289D2E1DE157EA00ABFF9E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = SKInvaders/Assets; sourceTree = "<group>"; };
+		F63C73691DE5F16F00E98DC3 /* InvaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvaderController.swift; sourceTree = "<group>"; };
+		F63C736B1DE5F25200E98DC3 /* Invader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,9 @@
 		CDF079CC1975428800FFAB46 /* Invaders */ = {
 			isa = PBXGroup;
 			children = (
+				F63C736D1DE5FCD300E98DC3 /* Actors */,
+				F63C736B1DE5F25200E98DC3 /* Invader.swift */,
+				F63C73681DE5F0ED00E98DC3 /* New Group */,
 				CDF079F01975453100FFAB46 /* Assets */,
 				CDF079CF1975428800FFAB46 /* AppDelegate.swift */,
 				CDF079D31975428800FFAB46 /* GameScene.swift */,
@@ -111,6 +118,7 @@
 				F6289D2A1DE10AA700ABFF9E /* Settings.swift */,
 				CDF079DA1975428800FFAB46 /* Images.xcassets */,
 				CDF079CD1975428800FFAB46 /* Supporting Files */,
+				F63C73691DE5F16F00E98DC3 /* InvaderController.swift */,
 			);
 			name = Invaders;
 			path = SKInvaders;
@@ -164,6 +172,20 @@
 				CDF07A051975453100FFAB46 /* Ship@2x.png */,
 			);
 			path = "Sprite Images";
+			sourceTree = "<group>";
+		};
+		F63C73681DE5F0ED00E98DC3 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		F63C736D1DE5FCD300E98DC3 /* Actors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Actors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF079D41975428800FFAB46 /* GameScene.swift in Sources */,
+				F63C736C1DE5F25200E98DC3 /* Invader.swift in Sources */,
 				CDF079D61975428800FFAB46 /* GameViewController.swift in Sources */,
 				CDF07A1A1975510100FFAB46 /* GameOverScene.swift in Sources */,
 				CDF079D01975428800FFAB46 /* AppDelegate.swift in Sources */,
+				F63C736A1DE5F16F00E98DC3 /* InvaderController.swift in Sources */,
 				F6289D2B1DE10AA700ABFF9E /* Settings.swift in Sources */,
 				F6289D2D1DE10B8100ABFF9E /* SettingsViewController.swift in Sources */,
 			);
