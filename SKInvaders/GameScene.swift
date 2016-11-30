@@ -26,8 +26,13 @@
 import SpriteKit
 import CoreMotion
 
+
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
-  
+
+var pause = false;
+    var settingsVC : SettingsViewController!
+    
   // Private GameScene Properties
     
     // Device Properties
@@ -100,8 +105,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
  /*  Moved to 'Invader' */
     //3:  Invaders take 1 second for each move. Each step left, right or down takes 1 second.
     var timePerMove: TimeInterval = 1.0
- 
-
+   
     
   
  
@@ -485,6 +489,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
     /* Called before each frame is rendered */
     
     // Handle Queues
+    if self.pause == false {
     processContacts(forUpdate: currentTime)
     
     processUerTaps(forUpdate: currentTime)
@@ -495,6 +500,8 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
    moveInvaders(forUpdate: currentTime)
     
     fireInvaderBullets(forUpdate: currentTime)
+    }
+    
     
     if isGameOver() {
         endGame()
@@ -803,5 +810,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
         }
     }
 
-}
+          
+    }
+
 

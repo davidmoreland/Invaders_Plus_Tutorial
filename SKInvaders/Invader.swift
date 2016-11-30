@@ -11,7 +11,8 @@ import GameKit
 
 class Invader {
     
-
+    var timePerMove : TimeInterval = 1.0
+    
 
 enum InvaderType {
     case a
@@ -47,9 +48,7 @@ func loadInvaderTextures(ofType invaderType: InvaderType)->[SKTexture] {
     
 }
 
-// Movement
-//3:  Invaders take 1 second for each move. Each step left, right or down takes 1 second.
-var timePerMove: TimeInterval = 1.0
+    
 
 
 

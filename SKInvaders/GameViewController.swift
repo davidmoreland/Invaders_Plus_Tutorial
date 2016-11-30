@@ -25,6 +25,20 @@ import SpriteKit
 
 class GameViewController: UIViewController {
   
+ var pause = false
+ var SettingVC : SettingsViewController = SettingsViewController()
+  var gameScene : GameScene = GameScene()
+  
+ 
+  @IBAction func SettingsButton(_ sender: UIButton) {
+    self.performSegue(withIdentifier: "presentSettings", sender: self)
+    
+   
+    
+  }
+  
+  // let scene = GameScene(size: skView.frame.size)
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -37,7 +51,9 @@ class GameViewController: UIViewController {
     skView.ignoresSiblingOrder = true
     
     // Create and configure the scene.
-    let scene = GameScene(size: skView.frame.size)
+  let scene = GameScene(size: skView.frame.size)
+    self.gameScene = scene
+    
     skView.presentScene(scene)
     
     // Pause the view (and thus the game) when the app is interrupted or backgrounded
@@ -73,4 +89,20 @@ class GameViewController: UIViewController {
     skView.isPaused = false
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    if segue.identifier == "presentSettings" {
+      self.SettingVC  = segue.destination as! SettingsViewController
+     // SettingVC.pause = true
+      gameScene.pause = true
+      SettingVC.gameScene = self.gameScene
+    //  SettingVC.restoreSettings()
+    
+     // settingsVC.pauseGame(pause: true)
+     
+    }
+  }
+
 }
+
+

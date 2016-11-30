@@ -2,4 +2,236 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SKInvaders/GameViewController.swift"
+            timestampString = "502156691.042481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SKInvaders/GameViewController.swift"
+            timestampString = "502156691.042481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SKInvaders/GameScene.swift"
+            timestampString = "502156691.042481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "GameScene"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Invaders_Plus.GameScene.timePerMove.getter : Swift.Double"
+                  moduleName = "Invaders-Plus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
+                  timestampString = "502155110.846242"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Invaders_Plus.GameScene.timePerMove.setter : Swift.Double"
+                  moduleName = "Invaders-Plus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
+                  timestampString = "502155110.848938"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Invaders_Plus.GameScene.init () -&gt; Invaders_Plus.GameScene"
+                  moduleName = "Invaders-Plus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
+                  timestampString = "502155110.854665"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "465">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Invaders_Plus.GameScene.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Invaders_Plus.GameScene&gt;"
+                  moduleName = "Invaders-Plus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
+                  timestampString = "502155110.857373"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "476">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SKInvaders/SettingsViewController.swift"
+            timestampString = "502158671.783061"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "InvaderShipSpeed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SKInvaders/SettingsViewController.swift"
+            timestampString = "502158671.783061"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "InvaderShipSpeed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Invaders_Plus.SettingsViewController.InvaderShip_ReinforcementNumberLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "Invaders-Plus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/SettingsViewController.swift"
+                  timestampString = "502157827.148296"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Invaders_Plus.SettingsViewController.InvaderShip_ReinforcementNumberLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "Invaders-Plus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/SettingsViewController.swift"
+                  timestampString = "502157827.150674"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Invaders_Plus.SettingsViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Invaders_Plus.SettingsViewController"
+                  moduleName = "Invaders-Plus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/SettingsViewController.swift"
+                  timestampString = "502157827.153346"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "981">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Invaders_Plus.SettingsViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Invaders_Plus.SettingsViewController&gt;"
+                  moduleName = "Invaders-Plus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/SettingsViewController.swift"
+                  timestampString = "502157827.155792"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "877">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SKInvaders/SettingsViewController.swift"
+            timestampString = "502158671.783061"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "InvaderShipSpeed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -37,6 +37,7 @@
 		F6289D2F1DE157EA00ABFF9E /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = F6289D2E1DE157EA00ABFF9E /* Assets */; };
 		F63C736A1DE5F16F00E98DC3 /* InvaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C73691DE5F16F00E98DC3 /* InvaderController.swift */; };
 		F63C736C1DE5F25200E98DC3 /* Invader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C736B1DE5F25200E98DC3 /* Invader.swift */; };
+		F63C736F1DEE59BC00E98DC3 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F63C736E1DEE59BC00E98DC3 /* Settings.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		F6289D2E1DE157EA00ABFF9E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = SKInvaders/Assets; sourceTree = "<group>"; };
 		F63C73691DE5F16F00E98DC3 /* InvaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvaderController.swift; sourceTree = "<group>"; };
 		F63C736B1DE5F25200E98DC3 /* Invader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invader.swift; sourceTree = "<group>"; };
+		F63C736E1DEE59BC00E98DC3 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				CDF079CE1975428800FFAB46 /* Info.plist */,
+				F63C736E1DEE59BC00E98DC3 /* Settings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				CDF07A101975453100FFAB46 /* InvaderB_00@2x.png in Resources */,
 				CDF07A0B1975453100FFAB46 /* InvaderA_00.png in Resources */,
 				CDF07A121975453100FFAB46 /* InvaderB_01@2x.png in Resources */,
+				F63C736F1DEE59BC00E98DC3 /* Settings.plist in Resources */,
 				CDF07A0C1975453100FFAB46 /* InvaderA_00@2x.png in Resources */,
 				CDF07A091975453100FFAB46 /* ShipBullet.wav in Resources */,
 				CDF07A141975453100FFAB46 /* InvaderC_00@2x.png in Resources */,
