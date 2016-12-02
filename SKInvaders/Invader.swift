@@ -10,9 +10,12 @@ import Foundation
 import GameKit
 
 class Invader {
+
+  //  var settings = Settings()
+  //  var timeValue = (TimeInterval(UserDefaults.standard.string(forKey:"InvaderShipSpeed")!))
     
-    var timePerMove : TimeInterval = 1.0
-    
+    var timePerMove = 1.0
+   // var timePerMove  = settings.ShipSpeed(timeValue)
 
 enum InvaderType {
     case a
@@ -60,7 +63,7 @@ func makeInvader(ofType invaderType: InvaderType)-> SKNode {
     // Uses the first such texture as the sprite’s base image.
     let invader = SKSpriteNode(texture: invaderTextures[0])
     invader.name = InvaderType.name
-    
+  
     // Animates these two images in a continuous animation loop.
     invader.run(SKAction.repeatForever(SKAction.animate(with: invaderTextures, timePerFrame: timePerMove)))
     

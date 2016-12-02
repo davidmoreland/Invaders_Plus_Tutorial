@@ -9,19 +9,21 @@
 import UIKit
 
 class Settings: NSObject {
+
+    let SettingsVC : SettingsViewController? = nil
     
+    var invaderShipSpeed : String = "1"
     
-    var InvaderShipSpeed : String = "1"
+    var invaderNumberOfShots : String = "1"
     
-    var InvaderNumberOfShots : String = "1"
+    var invaderFiringRate : String = "1"
     
-    var InvaderFiringRate : String = "1"
+    var defenderShipSpeed : String = "1"
     
-    var DefenderShipSpeed : String = "1"
+    var defenderNumberOfShots : String = "1"
     
-    var DefenderNumberOfShots : String = "1"
+    var defenderFiringRate: String = "1"
     
-    var DefenderFiringRate: String = "1"
     
     // Default
     func EasyGamePlay() {
@@ -50,31 +52,35 @@ class Settings: NSObject {
     func resetGameSettings() {
         if UserDefaults.standard.string(forKey: "Invader_ShipSpeed") == nil {
             UserDefaults.standard.setValue("1", forKey: "InvaderShipSpeed")
-            
-            let invaderShipSpeed = UserDefaults.standard.string(forKey: "InvaderShipSpeed")
-            print("Userdefaults - resetGameSettings: InvaderShipSpeed: \(invaderShipSpeed)" )
-            
+            UserDefaults.standard.setValue("1", forKey: "InvaderShipSpeed")
             UserDefaults.standard.setValue("1", forKey: "InvaderNumberOfShots")
             UserDefaults.standard.setValue("1", forKey:  "InvaderFiringRate")
             UserDefaults.standard.setValue("1", forKey:  "DefenderShipSpeed")
             UserDefaults.standard.setValue("1", forKey:  "DefenderNumberOfShots")
             UserDefaults.standard.setValue("1", forKey:  "DefenderFiringRate")
-          //  testGameSettings()
-            
+                      
         }
     }
     
-    
+    func saveGameSettings() {
+        UserDefaults.standard.setValue(self.invaderShipSpeed, forKey: "InvaderShipSpeed")
+        UserDefaults.standard.setValue(self.invaderNumberOfShots, forKey: "InvaderNumberOfShots")
+        UserDefaults.standard.setValue(self.invaderFiringRate, forKey:  "InvaderFiringRate")
+        UserDefaults.standard.setValue(self.defenderShipSpeed, forKey:  "DefenderShipSpeed")
+        UserDefaults.standard.setValue(self.defenderNumberOfShots, forKey:  "DefenderNumberOfShots")
+        UserDefaults.standard.setValue(self.defenderFiringRate, forKey:  "DefenderFiringRate")
         
+    }
+    
                
-        func loadGameSettingDefaults() {
+        func loadGameSettings() {
             
-            UserDefaults.standard.string(forKey: "InvaderShipSpeed")
-            UserDefaults.standard.string(forKey:  "InvaderNumberOfShots")
-            UserDefaults.standard.string(forKey:   "InvaderFiringRate")
-            UserDefaults.standard.string(forKey: "DefenderShipSpeed")
-            UserDefaults.standard.string(forKey:   "DefenderNumberOfShots")
-            UserDefaults.standard.string(forKey:   "DefenderFiringRate")
+           self.invaderShipSpeed = UserDefaults.standard.string(forKey: "InvaderShipSpeed")!
+            self.invaderNumberOfShots = UserDefaults.standard.string(forKey:  "InvaderNumberOfShots")!
+            self.invaderFiringRate = UserDefaults.standard.string(forKey:   "InvaderFiringRate")!
+            self.defenderShipSpeed = UserDefaults.standard.string(forKey: "DefenderShipSpeed")!
+            self.defenderNumberOfShots = UserDefaults.standard.string(forKey:   "DefenderNumberOfShots")!
+            self.defenderFiringRate = UserDefaults.standard.string(forKey:   "DefenderFiringRate")!
             
         }
         

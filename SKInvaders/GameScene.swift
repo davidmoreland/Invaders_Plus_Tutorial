@@ -32,6 +32,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 var pause = false;
     var settingsVC : SettingsViewController!
+    var settings = Settings()
+    
+    var defenderShipSpeed :CGFloat = 40
+    var tiltSensitivity = 0.2
     
    // let GameOverScene.gameScene = self
     
@@ -109,7 +113,7 @@ var pause = false;
     var timePerMove: TimeInterval = 1.0
    
     
-  
+ //  timePerMove = settings.ShipSpeed(timePerMove)
  
 // Display Properties
     
@@ -410,17 +414,22 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
  */
                 
 
-                if fabs(data.acceleration.x) > 0.2 {
+             /*   if fabs(data.acceleration.x) > 0.2 {
+               */
+                if fabs(data.acceleration.x) > tiltSensitivity {
                     
-                
 /* // 4 How fast to move ship.   Hmmm, how do you actually use data.acceleration.x to move the ship? You want small values to move the ship a little and large values to move the ship a lot. For now, you just print out the acceleration value.
 */
-                    ship.physicsBody!.applyForce(CGVector(dx: 40 * CGFloat(data.acceleration.x), dy: 0))
-                    
-                        
+                    /*
+ ship.physicsBody!.applyForce(CGVector(dx: 40 * CGFloat(data.acceleration.x), dy: 0))
+ */
+        ship.physicsBody!.applyForce(CGVector(dx: defenderShipSpeed * CGFloat(data.acceleration.x),
+             dy: 0))
+                    /*
                     print("Acceleration X: \(data.acceleration.x)")
                     print("Acceleration Y: \(data.acceleration.y)")
-                }
+ */
+ }
             
             }
         }

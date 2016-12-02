@@ -15,7 +15,7 @@
         <!--Game View Controller-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
-                <viewController storyboardIdentifier="GameScene" id="LVB-YS-i5n" customClass="GameViewController" customModule="Invaders_Plus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameScene" id="LVB-YS-i5n" customClass="GameViewController" customModule="InvadersPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PCf-gQ-wO7"/>
                         <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
@@ -62,7 +62,7 @@
         <!--Settings View Controller-->
         <scene sceneID="wBy-zz-lJq">
             <objects>
-                <viewController storyboardIdentifier="Settings" id="waj-Rr-O8y" customClass="SettingsViewController" customModule="Invaders_Plus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings" id="waj-Rr-O8y" customClass="SettingsViewController" customModule="InvadersPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uDV-Jw-iCk"/>
                         <viewControllerLayoutGuide type="bottom" id="cIy-ek-Y5J"/>
@@ -90,7 +90,7 @@
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Shot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="S5l-bw-Cqz" userLabel="InvaderLabel # of Shot">
-                                <rect key="frame" x="111" y="122" width="97" height="20"/>
+                                <rect key="frame" x="111" y="122" width="98" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -128,8 +128,6 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="8WA-D1-Oza" userLabel="InvaderFiringRateStepper">
                                 <rect key="frame" x="213" y="283" width="94" height="29"/>
                                 <connections>
-                                    <action selector="DefenderFiringRate:" destination="waj-Rr-O8y" eventType="valueChanged" id="cJb-Ba-d5F"/>
-                                    <action selector="DefenderFiringRateStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="LmJ-Gf-LMS"/>
                                     <action selector="Defender_FiringRateStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="qOX-VE-t2V"/>
                                 </connections>
                             </stepper>
@@ -144,7 +142,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="pB7-85-Jt8">
-                                <rect key="frame" x="115" y="27" width="91" height="52"/>
+                                <rect key="frame" x="116" y="27" width="90" height="52"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Bhl-oB-NlJ"/>
@@ -167,7 +165,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Invaders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZkA-Ud-Ck1" userLabel="SectionLabel_Invaders">
-                                <rect key="frame" x="14" y="27" width="69" height="21"/>
+                                <rect key="frame" x="14" y="27" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -179,7 +177,7 @@
                                 </connections>
                             </stepper>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-hy-Pgb" userLabel="Defender_FiringRateStepper">
-                                <rect key="frame" x="210" y="409" width="94" height="29"/>
+                                <rect key="frame" x="209" y="373" width="94" height="29"/>
                                 <connections>
                                     <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="G3Y-2g-EfU"/>
                                 </connections>
@@ -200,9 +198,18 @@
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFm-dJ-8e0" userLabel="Defender_Ship Speed Label">
-                                <rect key="frame" x="233" y="381" width="60" height="20"/>
+                                <rect key="frame" x="231" y="345" width="62" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEK-t6-1GD" userLabel="DefenderLabel Firing Rate">
+                                <rect key="frame" x="111" y="334" width="94" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="j42-nE-ypl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgs-Ji-qEc" userLabel="Defender-Result # shots">
@@ -224,7 +231,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ship" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c62-Un-rfE" userLabel="SectionLabel_Velocity">
-                                <rect key="frame" x="140" y="324" width="44" height="24"/>
+                                <rect key="frame" x="138" y="302" width="44" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="574-bE-QAn"/>
                                 </constraints>
@@ -232,23 +239,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEK-t6-1GD" userLabel="DefenderLabel Firing Rate">
-                                <rect key="frame" x="113" y="356" width="94" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="j42-nE-ypl"/>
-                                </constraints>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="11J-g1-iOe" userLabel="Defender_FiringRateStepper">
+                                <rect key="frame" x="209" y="438" width="94" height="29"/>
+                                <connections>
+                                    <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="kyW-gW-RHv"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sensitivity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3l-gB-wU0" userLabel="Defender_Ship Speed Label">
+                                <rect key="frame" x="224" y="410" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Tcj-wM-JQL">
+                                <rect key="frame" x="87" y="489" width="147" height="52"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="vdz-Z5-FtR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Defaul Settings">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetGame:" destination="waj-Rr-O8y" eventType="touchUpInside" id="fqS-Tj-KEj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="l1g-cD-xou" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-108.25" id="2Hm-rl-HQg"/>
-                            <constraint firstItem="oj0-zM-As7" firstAttribute="leading" secondItem="TFm-dJ-8e0" secondAttribute="leading" constant="-3" id="3Qb-z4-4AD"/>
-                            <constraint firstItem="TFm-dJ-8e0" firstAttribute="baseline" secondItem="imv-rN-vcj" secondAttribute="firstBaseline" constant="-2.3333333333333144" id="3Wg-2c-qXT"/>
+                            <constraint firstItem="oj0-zM-As7" firstAttribute="leading" secondItem="TFm-dJ-8e0" secondAttribute="leading" constant="-1" id="3Qb-z4-4AD"/>
+                            <constraint firstItem="TFm-dJ-8e0" firstAttribute="baseline" secondItem="imv-rN-vcj" secondAttribute="firstBaseline" constant="-38.5" id="3Wg-2c-qXT"/>
+                            <constraint firstItem="Tcj-wM-JQL" firstAttribute="leading" secondItem="pB7-85-Jt8" secondAttribute="leading" constant="-29" id="3af-8B-m72"/>
                             <constraint firstItem="TwN-EZ-J6H" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-6.25" id="4lX-ic-gTj"/>
-                            <constraint firstItem="Nem-hy-Pgb" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-11.25" id="5IX-0u-n9K"/>
+                            <constraint firstItem="Nem-hy-Pgb" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-13" id="5IX-0u-n9K"/>
                             <constraint firstItem="9fc-Yv-mTu" firstAttribute="top" secondItem="pB7-85-Jt8" secondAttribute="bottom" constant="8" symbolic="YES" id="9AY-o3-qho"/>
                             <constraint firstItem="Gkx-ms-3d8" firstAttribute="leading" secondItem="IxC-7p-0FO" secondAttribute="leading" id="Bhi-0C-wOL"/>
                             <constraint firstItem="imv-rN-vcj" firstAttribute="trailing" secondItem="3aL-Rk-j64" secondAttribute="trailing" id="D9J-hR-9N5"/>
@@ -256,7 +281,8 @@
                             <constraint firstItem="IxC-7p-0FO" firstAttribute="top" secondItem="imv-rN-vcj" secondAttribute="bottom" constant="8" id="Dib-2Y-Rxh"/>
                             <constraint firstItem="imv-rN-vcj" firstAttribute="centerX" secondItem="IxC-7p-0FO" secondAttribute="centerX" id="Dkm-Hi-QhY"/>
                             <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="centerY" secondItem="oj0-zM-As7" secondAttribute="centerY" id="EY9-P4-LpF"/>
-                            <constraint firstItem="TFm-dJ-8e0" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-6" id="Emk-pJ-KfD"/>
+                            <constraint firstItem="11J-g1-iOe" firstAttribute="top" secondItem="M3l-gB-wU0" secondAttribute="bottom" constant="7" id="EcX-DN-IL0"/>
+                            <constraint firstItem="TFm-dJ-8e0" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-7" id="Emk-pJ-KfD"/>
                             <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="top" secondItem="pB7-85-Jt8" secondAttribute="top" id="Emp-Mq-tqj"/>
                             <constraint firstItem="oj0-zM-As7" firstAttribute="leading" secondItem="pB7-85-Jt8" secondAttribute="trailing" constant="24" id="Fn7-ao-Huv"/>
                             <constraint firstItem="qQZ-dc-n0p" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-4" id="HGD-x0-aie"/>
@@ -271,15 +297,17 @@
                             <constraint firstItem="qQZ-dc-n0p" firstAttribute="top" secondItem="3aL-Rk-j64" secondAttribute="bottom" constant="7" id="T1v-a8-Ilx"/>
                             <constraint firstItem="l1g-cD-xou" firstAttribute="trailing" secondItem="ZDN-IK-mnc" secondAttribute="trailingMargin" constant="-97" id="TYs-8a-OAX"/>
                             <constraint firstItem="oj0-zM-As7" firstAttribute="top" secondItem="uDV-Jw-iCk" secondAttribute="bottom" constant="8" symbolic="YES" id="U4R-F7-zWz"/>
+                            <constraint firstItem="Tcj-wM-JQL" firstAttribute="trailing" secondItem="pB7-85-Jt8" secondAttribute="trailing" constant="28" id="UEr-ZU-onB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oj0-zM-As7" secondAttribute="trailing" constant="-4" id="UQf-MT-Uqr"/>
                             <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-2" id="VBN-X5-hVt"/>
                             <constraint firstItem="pB7-85-Jt8" firstAttribute="centerX" secondItem="9fc-Yv-mTu" secondAttribute="centerX" id="VHc-Ou-x0j"/>
-                            <constraint firstItem="c62-Un-rfE" firstAttribute="top" secondItem="l1g-cD-xou" secondAttribute="bottom" constant="82" id="WJh-Pe-Bud"/>
-                            <constraint firstItem="cIy-ek-Y5J" firstAttribute="top" secondItem="c62-Un-rfE" secondAttribute="bottom" constant="220" id="Wnw-E5-Rns"/>
+                            <constraint firstItem="c62-Un-rfE" firstAttribute="top" secondItem="l1g-cD-xou" secondAttribute="bottom" constant="60" id="WJh-Pe-Bud"/>
+                            <constraint firstItem="cIy-ek-Y5J" firstAttribute="top" secondItem="c62-Un-rfE" secondAttribute="bottom" constant="242" id="Wnw-E5-Rns"/>
                             <constraint firstItem="TwN-EZ-J6H" firstAttribute="leading" secondItem="Hf3-Wf-web" secondAttribute="leading" constant="5" id="XSw-cJ-d6u"/>
+                            <constraint firstItem="M3l-gB-wU0" firstAttribute="top" secondItem="IxC-7p-0FO" secondAttribute="top" id="YXh-45-MDe"/>
                             <constraint firstItem="qQZ-dc-n0p" firstAttribute="top" secondItem="TwN-EZ-J6H" secondAttribute="top" id="ZMG-On-FCq"/>
                             <constraint firstItem="9fc-Yv-mTu" firstAttribute="centerX" secondItem="ZDN-IK-mnc" secondAttribute="centerX" id="ZlC-NT-kw0"/>
-                            <constraint firstItem="8WA-D1-Oza" firstAttribute="leading" secondItem="Nem-hy-Pgb" secondAttribute="leading" constant="3" id="a0b-57-6y6"/>
+                            <constraint firstItem="8WA-D1-Oza" firstAttribute="leading" secondItem="Nem-hy-Pgb" secondAttribute="leading" constant="4" id="a0b-57-6y6"/>
                             <constraint firstItem="uDV-Jw-iCk" firstAttribute="top" secondItem="1EO-2H-HvX" secondAttribute="bottom" constant="87" id="asr-ca-hhF"/>
                             <constraint firstItem="1EO-2H-HvX" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-68" id="bxs-xQ-lGE"/>
                             <constraint firstItem="TwN-EZ-J6H" firstAttribute="trailing" secondItem="Hf3-Wf-web" secondAttribute="trailing" constant="5" id="dP9-pP-i3e"/>
@@ -289,15 +317,18 @@
                             <constraint firstItem="3Tl-9Y-g55" firstAttribute="firstBaseline" secondItem="Hf3-Wf-web" secondAttribute="firstBaseline" id="fee-pm-deq"/>
                             <constraint firstItem="S5l-bw-Cqz" firstAttribute="top" secondItem="ZkA-Ud-Ck1" secondAttribute="bottom" constant="74" id="fev-QP-37R"/>
                             <constraint firstItem="l1g-cD-xou" firstAttribute="trailing" secondItem="8WA-D1-Oza" secondAttribute="trailing" constant="-100" id="gWh-aM-qyS"/>
-                            <constraint firstItem="imv-rN-vcj" firstAttribute="baseline" secondItem="TFm-dJ-8e0" secondAttribute="firstBaseline" id="gxh-bj-Pzl"/>
-                            <constraint firstItem="SEK-t6-1GD" firstAttribute="leading" secondItem="ZkA-Ud-Ck1" secondAttribute="leading" constant="99" id="hcx-37-EKA"/>
-                            <constraint firstItem="9fc-Yv-mTu" firstAttribute="centerX" secondItem="c62-Un-rfE" secondAttribute="centerX" constant="-1" id="ius-S7-1ZA"/>
+                            <constraint firstItem="imv-rN-vcj" firstAttribute="baseline" secondItem="TFm-dJ-8e0" secondAttribute="firstBaseline" constant="36.5" id="gxh-bj-Pzl"/>
+                            <constraint firstItem="SEK-t6-1GD" firstAttribute="leading" secondItem="ZkA-Ud-Ck1" secondAttribute="leading" constant="97" id="hcx-37-EKA"/>
+                            <constraint firstItem="9fc-Yv-mTu" firstAttribute="centerX" secondItem="c62-Un-rfE" secondAttribute="centerX" constant="0.5" id="ius-S7-1ZA"/>
                             <constraint firstItem="pB7-85-Jt8" firstAttribute="leading" secondItem="ZkA-Ud-Ck1" secondAttribute="trailing" constant="32" id="k31-e4-CxN"/>
                             <constraint firstItem="Gkx-ms-3d8" firstAttribute="top" secondItem="3Tl-9Y-g55" secondAttribute="bottom" constant="9" id="laD-N5-V1L"/>
+                            <constraint firstItem="M3l-gB-wU0" firstAttribute="centerX" secondItem="11J-g1-iOe" secondAttribute="centerX" constant="6.5" id="lnG-s1-zdp"/>
                             <constraint firstItem="cIy-ek-Y5J" firstAttribute="top" secondItem="IxC-7p-0FO" secondAttribute="bottom" constant="129" id="ogI-lt-05v"/>
                             <constraint firstItem="3Tl-9Y-g55" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-6" id="s6w-Nj-rwS"/>
-                            <constraint firstItem="SEK-t6-1GD" firstAttribute="top" secondItem="Gkx-ms-3d8" secondAttribute="bottom" constant="44" id="t4V-HZ-TG6"/>
-                            <constraint firstItem="imv-rN-vcj" firstAttribute="top" secondItem="SEK-t6-1GD" secondAttribute="bottom" constant="6.5" id="vT8-io-AGg"/>
+                            <constraint firstItem="SEK-t6-1GD" firstAttribute="top" secondItem="Gkx-ms-3d8" secondAttribute="bottom" constant="22.5" id="t4V-HZ-TG6"/>
+                            <constraint firstItem="imv-rN-vcj" firstAttribute="top" secondItem="SEK-t6-1GD" secondAttribute="bottom" constant="28" id="vT8-io-AGg"/>
+                            <constraint firstItem="cIy-ek-Y5J" firstAttribute="top" secondItem="Tcj-wM-JQL" secondAttribute="bottom" constant="27" id="wxi-eu-HC0"/>
+                            <constraint firstItem="11J-g1-iOe" firstAttribute="leading" secondItem="Nem-hy-Pgb" secondAttribute="leading" id="xKB-4H-4oK"/>
                             <constraint firstItem="l1g-cD-xou" firstAttribute="top" secondItem="S5l-bw-Cqz" secondAttribute="bottom" constant="68" id="xyL-HL-F19"/>
                             <constraint firstItem="8WA-D1-Oza" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-8.25" id="z7l-s5-lYk"/>
                         </constraints>

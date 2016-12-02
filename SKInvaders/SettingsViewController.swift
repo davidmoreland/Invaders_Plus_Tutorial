@@ -12,29 +12,28 @@ import SceneKit
 
 class SettingsViewController: UIViewController {
     
-   
-    
     var pause : Bool = true
     var gameScene : GameScene!
     var GameVC : GameViewController!
     var settings : Settings = Settings()
+    var numberOfShotsText : String = "1"
+  //  let settings.SettingsVC = self
     
-    
-    var numberOfShotsText : String = "0"
     
     
     
 // Invaders -- Number of Shots On screen
-    @IBOutlet weak var Invader_NumberOfShotsLabel: UILabel! { willSet(numberOfShotsText) {
-        
-        }
-    }
+    @IBOutlet weak var Invader_NumberOfShotsLabel: UILabel!
+    
     
     
     @IBOutlet weak var Invader_NumberOfShotsStepper: UIStepper!
       @IBAction func Invader_NumberOfShotsStepper(_ sender: UIStepper) {
-        Invader_NumberOfShotsLabel.text = "\(Int(sender.value))"
-        numberOfShotsText = "\(Int(sender.value))"
+        
+        let invaderNumberOfShots = "\(Int(sender.value))"
+        
+        Invader_NumberOfShotsLabel.text = invaderNumberOfShots
+        settings.invaderNumberOfShots = invaderNumberOfShots
         
     }
     
@@ -45,22 +44,38 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var Invader_FiringRateLabel: UILabel!
     @IBOutlet weak var Invader_FiringRateStepper: UIStepper!
     @IBAction func Invader_FiringRateStepper(_ sender: UIStepper) {
-        Invader_FiringRateLabel.text  = "\(Int(sender.value))"
+        
+        let invaderFiringRate = "\(Int(sender.value))"
+        
+        Invader_FiringRateLabel.text  = invaderFiringRate
+        
+    settings.invaderFiringRate = invaderFiringRate
+        
     }
     
     
     @IBOutlet weak var Invader_ShipSpeedLabel: UILabel!
+        
+
     
     @IBOutlet weak var Invader_ShipSpeedStepper: UIStepper!
     
     @IBAction func Invader_ShipSpeedStepper(_ sender: UIStepper) {
         
-        Invader_ShipSpeedLabel.text = "\(Int(sender.value))"
+        let speed = "\(Int(sender.value))"
+        
+        Invader_ShipSpeedLabel.text = speed
+        
+        settings.invaderShipSpeed = speed
+        
         let timePerMove = (TimeInterval(sender.value))
         
-        gameScene.timePerMove = timePerMove
-        gameScene.timePerMove = settings.ShipSpeed(time: timePerMove)
+      //  gameScene.timePerMove = timePerMove
         
+        print("TimePerMove: \(timePerMove)")
+        
+        gameScene.timePerMove = settings.ShipSpeed(time: timePerMove)
+        print("GameScene -- TimePerMove: \(gameScene.timePerMove)")
     }
     
     
@@ -72,7 +87,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var Defender_NumberOfShotsStepper: UIStepper!
     @IBAction func Defender_NumberOfShotsStepper(_ sender: UIStepper) {
         
-         Defender_NumberOfShotsLabel.text = "\(Int(sender.value))"
+        let numberOfShots = "\(Int(sender.value))"
+        
+         Defender_NumberOfShotsLabel.text = numberOfShots
+        
+        Defender_NumberOfShotsLabel.text = numberOfShots
+        settings.defenderNumberOfShots = numberOfShots
     }
     
     @IBOutlet weak var Defender_FiringRateLabel: UILabel!
@@ -80,7 +100,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var Defender_FiringRateStepper: UIStepper!
     
     @IBAction func Defender_FiringRateStepper(_ sender: UIStepper) {
-        Defender_FiringRateLabel.text  = "\(Int(sender.value))"
+        let rate = "\(Int(sender.value))"
+        Defender_FiringRateLabel.text = rate
+        settings.defenderFiringRate = rate
     }
     
     @IBOutlet weak var Defender_ShipSpeedLabel: UILabel!
@@ -88,12 +110,14 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var Defender_ShipSpeedStepper: UIStepper!
     
     @IBAction func Defender_ShipSpeedStepper(_ sender: UIStepper) {
+         let speed = "\(Int(sender.value))"
+        Defender_ShipSpeedLabel.text = speed
+         settings.defenderShipSpeed = speed
         
-        Invader_ShipSpeedLabel.text = "\(Int(sender.value))"
-        let timePerMove = (TimeInterval(sender.value))
+       // let timePerMove = (TimeInterval(sender.value))
         
-        gameScene.timePerMove = timePerMove
-        gameScene.timePerMove = settings.ShipSpeed(time: timePerMove)
+      //  gameScene.timePerMove = timePerMove
+     //  gameScene.timePerMove = settings.ShipSpeed(time: timePerMove)
         
     }
 
@@ -134,6 +158,8 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var InvaderShip_ReinforcementNumberLabel: UILabel!
     
+   
+    
     func pauseGame(pause : Bool) {
         
         while pause == true {
@@ -142,59 +168,78 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func exitSettings(_ sender: Any) {
-        //GameScene.pause = false
         
-        self.updateSettings()
-         gameScene.settingsVC = self
-         self.dismiss(animated: true, completion: nil)
+        settings.saveGameSettings()
+        gameScene.pause = false
+        self.dismiss(animated: true, completion: nil)
         
     }
+    
+    @IBAction func resetGame(_ sender: UIButton) {
+        settings.resetGame()
+        gameScene.pause = false
+        self.dismiss(animated: true, completion: nil)
+
+    }
+    
     
     override func viewDidLoad() {
-     self.reloadSettings()
+     settings.loadGameSettings()
+        
+        print("loadGameSettings: InvaderShipSpeed \(settings.invaderShipSpeed)")
+        self.updateSettingsUILabels()
+        self.updateSettingsUISteppers()
     }
     
     
+    func exitSettings()
+    {
+        settings.saveGameSettings()
+     //   gameScene.settingsVC = self
+        gameScene.pause = false
+
+    }
     
-    func reloadSettings() {
-        if (UserDefaults.standard.string(forKey: "InvaderShipSpeed") == nil)
-        {
-            restoreSettings()
-        }
         
-        let shipSpeed = UserDefaults.standard.string(forKey: "InvaderShipSpeed")
         
-        Invader_ShipSpeedStepper.value = (Double(shipSpeed!))!
+    
+
+    
+
+    func updateSettingsUILabels() {
+    
+        //Invader
+       
+    Invader_ShipSpeedLabel.text = settings.invaderShipSpeed
+    Invader_FiringRateLabel.text = settings.invaderFiringRate
+    Invader_NumberOfShotsLabel.text = settings.invaderNumberOfShots
+        Defender_ShipSpeedLabel.text = settings.defenderShipSpeed
+        Defender_FiringRateLabel.text = settings.defenderFiringRate
+        Defender_NumberOfShotsLabel.text = settings.defenderNumberOfShots
+        
+        print("InvaderShipSpeed_Label: \(Invader_ShipSpeedLabel.text)")
+        
+            
+           gameScene.pause = false
         
     }
 
+func updateSettingsUISteppers() {
+    
+    Invader_ShipSpeedStepper.value = (Double(settings.invaderShipSpeed))!
+    Invader_FiringRateStepper.value = (Double(settings.invaderFiringRate))!
+    Invader_NumberOfShotsStepper.value = (Double(settings.invaderNumberOfShots))!
+    Defender_NumberOfShotsStepper.value = (Double(settings.defenderShipSpeed))!
+    Defender_NumberOfShotsStepper.value = (Double(settings.defenderFiringRate))!
+    Defender_NumberOfShotsStepper.value = (Double(settings.invaderNumberOfShots))!
     
     
-    func updateSettings() {
-    
-        UserDefaults.standard.set(Invader_ShipSpeedLabel.text, forKey: "InvaderShipSpeed")
-        
-        
-        
-        print("InvaderShipSpeed: \(UserDefaults.standard.string(forKey: "InvaderShipSpeed"))")
-            
-   //     settingsData.setValue(InvaderShips_FiringRateLabel.text, forKey: "InvaderFiringRate")
-        
-        gameScene.pause = false
-        
-        
-        
-    }
-    
-    func restoreSettings()
-    {
-       
-       Invader_ShipSpeedLabel.text = UserDefaults.standard.string(forKey: "InvaderShipSpeed")
-      Invader_NumberOfShotsLabel.text =  UserDefaults.standard.string(forKey: "InvaderNumberOfShots")
-      Invader_FiringRateLabel.text =   UserDefaults.standard.string(forKey: "InvaderFiringRate")
-      Defender_ShipSpeedLabel.text =  UserDefaults.standard.string(forKey: "DefenderShipSpeed")
-      Defender_NumberOfShotsLabel.text = UserDefaults.standard.string(forKey: "DefenderNumberOfShots")
-      Defender_FiringRateLabel.text =   UserDefaults.standard.string(forKey: "DefenderFiringRate")
-        
-    }
 }
+    
+
+
+    
+    
+}
+
+
