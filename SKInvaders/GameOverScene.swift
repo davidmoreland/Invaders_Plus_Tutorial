@@ -29,6 +29,8 @@ class GameOverScene: SKScene {
     var contentCreated = false
     
     // Object Lifecycle Management
+
+    var gameScene : GameScene!
     
     // Scene Setup and Content Creation
     
@@ -60,10 +62,19 @@ class GameOverScene: SKScene {
         
         // black space color
         self.backgroundColor = SKColor.black
+        
+        resetGameScene()
 
     }
     
 
+    func resetGameScene() {
+        
+    
+        
+    }
+    
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -81,6 +92,8 @@ class GameOverScene: SKScene {
         
         let gameScene = GameScene(size: self.size)
         gameScene.scaleMode = .aspectFill
+        
+        self.resetGameScene()
         
         self.view?.presentScene(gameScene, transition: SKTransition.doorsCloseHorizontal(withDuration: 1.0))
         

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LVB-YS-i5n">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +21,7 @@
                         <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bdc-N1-crn" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnY-qx-vMw">
@@ -64,217 +67,253 @@
                         <viewControllerLayoutGuide type="top" id="uDV-Jw-iCk"/>
                         <viewControllerLayoutGuide type="bottom" id="cIy-ek-Y5J"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZDN-IK-mnc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="ZDN-IK-mnc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="368" affinity="minY"/>
+                        </userGuides>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invaders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkA-Ud-Ck1">
-                                <rect key="frame" x="152" y="10" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Missles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fc-Yv-mTu">
-                                <rect key="frame" x="16" y="28" width="57" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FLEET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8f-D3-wDu">
-                                <rect key="frame" x="25" y="495" width="49" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHIPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nd4-nb-ZLj">
-                                <rect key="frame" x="9" y="76" width="48" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmu-M5-hIN">
-                                <rect key="frame" x="161" y="496" width="61" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS5-Fb-K2Y">
-                                <rect key="frame" x="24" y="156" width="57" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EO-2H-HvX" userLabel="Invader_FiringRateLabel">
+                                <rect key="frame" x="-52" y="-85" width="161" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="cU1-93-2Wm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EO-2H-HvX">
-                                <rect key="frame" x="139" y="156" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-dc-n0p" userLabel="Invader_NumShotsStepper">
+                                <rect key="frame" x="12" y="173" width="94" height="29"/>
+                                <connections>
+                                    <action selector="Invader_NumberOfShotsStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="K3X-ft-DWG"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Shot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="S5l-bw-Cqz" userLabel="InvaderLabel # of Shot">
+                                <rect key="frame" x="111" y="122" width="97" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1g-cD-xou" userLabel="DefenderLabel Firing Rate">
+                                <rect key="frame" x="113" y="210" width="94" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="szD-nx-Moj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-Wf-web" userLabel="Defender-Result Firing Rate Label">
+                                <rect key="frame" x="210" y="254" width="94" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max # on Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jo1-U1-uoT">
-                                <rect key="frame" x="237" y="155" width="129" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" text="firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tl-9Y-g55" userLabel="Invader-Result Firing Rate Label">
+                                <rect key="frame" x="10" y="254" width="94" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="2b3-4J-rpK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imv-rN-vcj">
-                                <rect key="frame" x="164" y="523" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of ships" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOm-Td-ffx">
-                                <rect key="frame" x="278" y="524" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3w-0P-MEu">
-                                <rect key="frame" x="41" y="524" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ag-hq-VPq">
-                                <rect key="frame" x="164" y="369" width="56" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of ships" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xU1-0o-YSY">
-                                <rect key="frame" x="278" y="369" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cannon Cycle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFG-jv-eLk">
-                                <rect key="frame" x="9" y="265" width="107" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-dc-n0p" userLabel="InvaderNumShotsStepper">
-                                <rect key="frame" x="9" y="185" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-EZ-J6H" userLabel="Defender_NumShotsStepper">
+                                <rect key="frame" x="215" y="173" width="94" height="29"/>
                                 <connections>
-                                    <action selector="NumberOfShots:" destination="waj-Rr-O8y" eventType="valueChanged" id="58l-fA-S0Z"/>
+                                    <action selector="Defender_NumberOfShotsStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="0JQ-zI-VON"/>
                                 </connections>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-ms-3d8" userLabel="InvaderFiringRateStepper">
-                                <rect key="frame" x="133" y="185" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="8WA-D1-Oza" userLabel="InvaderFiringRateStepper">
+                                <rect key="frame" x="213" y="283" width="94" height="29"/>
                                 <connections>
-                                    <action selector="InvaderFiringRate:" destination="waj-Rr-O8y" eventType="valueChanged" id="ddS-zk-LnY"/>
+                                    <action selector="DefenderFiringRate:" destination="waj-Rr-O8y" eventType="valueChanged" id="cJb-Ba-d5F"/>
+                                    <action selector="DefenderFiringRateStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="LmJ-Gf-LMS"/>
+                                    <action selector="Defender_FiringRateStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="qOX-VE-t2V"/>
                                 </connections>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="aNv-8j-s2o" userLabel="InvaderFiringRateStepper">
-                                <rect key="frame" x="248" y="185" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="MaxNumberOfMissles:" destination="waj-Rr-O8y" eventType="valueChanged" id="Kda-A5-4aS"/>
-                                </connections>
-                            </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="IxC-7p-0FO" userLabel="InvaderFiringRateStepper">
-                                <rect key="frame" x="151" y="553" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="InvaderShipSpeed:" destination="waj-Rr-O8y" eventType="valueChanged" id="ETz-ja-4iK"/>
-                                </connections>
-                            </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="bva-4E-XzS" userLabel="InvaderFiringRateStepper">
-                                <rect key="frame" x="266" y="553" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pB7-85-Jt8">
-                                <rect key="frame" x="9" y="0.0" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Resume Game"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Missles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fc-Yv-mTu">
+                                <rect key="frame" x="98" y="87" width="125" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="r89-VI-1M9"/>
+                                    <constraint firstAttribute="width" constant="125" id="ryT-Rv-jeR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="pB7-85-Jt8">
+                                <rect key="frame" x="115" y="27" width="91" height="52"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Bhl-oB-NlJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Resume Game">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="exitSettings:" destination="waj-Rr-O8y" eventType="touchUpInside" id="CO9-rx-sb2"/>
                                 </connections>
                             </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2xv-Nb-rnO" userLabel="InvaderNumShotsStepper">
-                                <rect key="frame" x="9" y="294" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defenders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oj0-zM-As7">
+                                <rect key="frame" x="230" y="28" width="78" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="bdF-vV-Yb0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Invaders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZkA-Ud-Ck1" userLabel="SectionLabel_Invaders">
+                                <rect key="frame" x="14" y="27" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-ms-3d8" userLabel="Invader_FiringRateStepper">
+                                <rect key="frame" x="10" y="283" width="94" height="29"/>
                                 <connections>
-                                    <action selector="ShotCycleTimeSetter:" destination="waj-Rr-O8y" eventType="valueChanged" id="y2z-AM-yX4"/>
+                                    <action selector="Invader_FiringRateStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="HWT-zB-cdP"/>
                                 </connections>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="iBM-c5-7OT" userLabel="InvaderFiringRateStepper">
-                                <rect key="frame" x="150" y="395" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-hy-Pgb" userLabel="Defender_FiringRateStepper">
+                                <rect key="frame" x="210" y="409" width="94" height="29"/>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="zpD-8U-B6c" userLabel="InvaderFiringRateStepper">
-                                <rect key="frame" x="265" y="395" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="DG1-0h-JsO" userLabel="InvaderNumShotsStepper">
-                                <rect key="frame" x="25" y="550" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of Shot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5l-bw-Cqz">
-                                <rect key="frame" x="9" y="105" width="71" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="imv-rN-vcj" userLabel="Invader-Result Ship Speed Label">
+                                <rect key="frame" x="32" y="383" width="50" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="VIk-AO-FpI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="IxC-7p-0FO" userLabel="Invader_ShipSpeedStepper">
+                                <rect key="frame" x="10" y="410" width="94" height="29"/>
+                                <connections>
+                                    <action selector="Invader_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="L07-H3-2O5"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFm-dJ-8e0" userLabel="Defender_Ship Speed Label">
+                                <rect key="frame" x="233" y="381" width="60" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgs-Ji-qEc" userLabel="Defender-Result # shots">
+                                <rect key="frame" x="235" y="148" width="51" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="V2Y-VH-BO2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aL-Rk-j64" userLabel="Defender-Result # shots">
+                                <rect key="frame" x="31" y="148" width="51" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="Twu-aB-yr2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ship" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c62-Un-rfE" userLabel="SectionLabel_Velocity">
+                                <rect key="frame" x="140" y="324" width="44" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="574-bE-QAn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firing Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkr-IS-XF0">
-                                <rect key="frame" x="135" y="105" width="82" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max Missles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDS-5f-dMF">
-                                <rect key="frame" x="256" y="105" width="94" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cannon Cycle Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ux7-Kb-woi">
-                                <rect key="frame" x="9" y="236" width="155" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEK-t6-1GD" userLabel="DefenderLabel Firing Rate">
+                                <rect key="frame" x="113" y="356" width="94" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="j42-nE-ypl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l1g-cD-xou" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-108.25" id="2Hm-rl-HQg"/>
+                            <constraint firstItem="oj0-zM-As7" firstAttribute="leading" secondItem="TFm-dJ-8e0" secondAttribute="leading" constant="-3" id="3Qb-z4-4AD"/>
+                            <constraint firstItem="TFm-dJ-8e0" firstAttribute="baseline" secondItem="imv-rN-vcj" secondAttribute="firstBaseline" constant="-2.3333333333333144" id="3Wg-2c-qXT"/>
+                            <constraint firstItem="TwN-EZ-J6H" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-6.25" id="4lX-ic-gTj"/>
+                            <constraint firstItem="Nem-hy-Pgb" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-11.25" id="5IX-0u-n9K"/>
+                            <constraint firstItem="9fc-Yv-mTu" firstAttribute="top" secondItem="pB7-85-Jt8" secondAttribute="bottom" constant="8" symbolic="YES" id="9AY-o3-qho"/>
+                            <constraint firstItem="Gkx-ms-3d8" firstAttribute="leading" secondItem="IxC-7p-0FO" secondAttribute="leading" id="Bhi-0C-wOL"/>
+                            <constraint firstItem="imv-rN-vcj" firstAttribute="trailing" secondItem="3aL-Rk-j64" secondAttribute="trailing" id="D9J-hR-9N5"/>
+                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="top" secondItem="qQZ-dc-n0p" secondAttribute="bottom" constant="52" id="DIP-Tt-hBA"/>
+                            <constraint firstItem="IxC-7p-0FO" firstAttribute="top" secondItem="imv-rN-vcj" secondAttribute="bottom" constant="8" id="Dib-2Y-Rxh"/>
+                            <constraint firstItem="imv-rN-vcj" firstAttribute="centerX" secondItem="IxC-7p-0FO" secondAttribute="centerX" id="Dkm-Hi-QhY"/>
+                            <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="centerY" secondItem="oj0-zM-As7" secondAttribute="centerY" id="EY9-P4-LpF"/>
+                            <constraint firstItem="TFm-dJ-8e0" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-6" id="Emk-pJ-KfD"/>
+                            <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="top" secondItem="pB7-85-Jt8" secondAttribute="top" id="Emp-Mq-tqj"/>
+                            <constraint firstItem="oj0-zM-As7" firstAttribute="leading" secondItem="pB7-85-Jt8" secondAttribute="trailing" constant="24" id="Fn7-ao-Huv"/>
+                            <constraint firstItem="qQZ-dc-n0p" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-4" id="HGD-x0-aie"/>
+                            <constraint firstItem="TFm-dJ-8e0" firstAttribute="centerX" secondItem="Nem-hy-Pgb" secondAttribute="centerX" constant="5.25" id="Hft-hC-UQy"/>
+                            <constraint firstItem="Nem-hy-Pgb" firstAttribute="top" secondItem="TFm-dJ-8e0" secondAttribute="bottom" constant="8" id="I8U-H4-8dI"/>
+                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="leading" secondItem="Gkx-ms-3d8" secondAttribute="leading" id="KAg-0V-M5C"/>
+                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="trailing" secondItem="Gkx-ms-3d8" secondAttribute="trailing" id="Kd2-tV-24k"/>
+                            <constraint firstItem="l1g-cD-xou" firstAttribute="leading" secondItem="8WA-D1-Oza" secondAttribute="leading" constant="-100" id="LtJ-S9-Dqf"/>
+                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="baseline" secondItem="Hf3-Wf-web" secondAttribute="baseline" id="Mqp-YR-mkQ"/>
+                            <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="centerX" secondItem="S5l-bw-Cqz" secondAttribute="centerX" constant="-111.25" id="NNc-xk-39b"/>
+                            <constraint firstItem="S5l-bw-Cqz" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="95" id="NNt-Bo-mHw"/>
+                            <constraint firstItem="qQZ-dc-n0p" firstAttribute="top" secondItem="3aL-Rk-j64" secondAttribute="bottom" constant="7" id="T1v-a8-Ilx"/>
+                            <constraint firstItem="l1g-cD-xou" firstAttribute="trailing" secondItem="ZDN-IK-mnc" secondAttribute="trailingMargin" constant="-97" id="TYs-8a-OAX"/>
+                            <constraint firstItem="oj0-zM-As7" firstAttribute="top" secondItem="uDV-Jw-iCk" secondAttribute="bottom" constant="8" symbolic="YES" id="U4R-F7-zWz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oj0-zM-As7" secondAttribute="trailing" constant="-4" id="UQf-MT-Uqr"/>
+                            <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-2" id="VBN-X5-hVt"/>
+                            <constraint firstItem="pB7-85-Jt8" firstAttribute="centerX" secondItem="9fc-Yv-mTu" secondAttribute="centerX" id="VHc-Ou-x0j"/>
+                            <constraint firstItem="c62-Un-rfE" firstAttribute="top" secondItem="l1g-cD-xou" secondAttribute="bottom" constant="82" id="WJh-Pe-Bud"/>
+                            <constraint firstItem="cIy-ek-Y5J" firstAttribute="top" secondItem="c62-Un-rfE" secondAttribute="bottom" constant="220" id="Wnw-E5-Rns"/>
+                            <constraint firstItem="TwN-EZ-J6H" firstAttribute="leading" secondItem="Hf3-Wf-web" secondAttribute="leading" constant="5" id="XSw-cJ-d6u"/>
+                            <constraint firstItem="qQZ-dc-n0p" firstAttribute="top" secondItem="TwN-EZ-J6H" secondAttribute="top" id="ZMG-On-FCq"/>
+                            <constraint firstItem="9fc-Yv-mTu" firstAttribute="centerX" secondItem="ZDN-IK-mnc" secondAttribute="centerX" id="ZlC-NT-kw0"/>
+                            <constraint firstItem="8WA-D1-Oza" firstAttribute="leading" secondItem="Nem-hy-Pgb" secondAttribute="leading" constant="3" id="a0b-57-6y6"/>
+                            <constraint firstItem="uDV-Jw-iCk" firstAttribute="top" secondItem="1EO-2H-HvX" secondAttribute="bottom" constant="87" id="asr-ca-hhF"/>
+                            <constraint firstItem="1EO-2H-HvX" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-68" id="bxs-xQ-lGE"/>
+                            <constraint firstItem="TwN-EZ-J6H" firstAttribute="trailing" secondItem="Hf3-Wf-web" secondAttribute="trailing" constant="5" id="dP9-pP-i3e"/>
+                            <constraint firstItem="TwN-EZ-J6H" firstAttribute="top" secondItem="Cgs-Ji-qEc" secondAttribute="bottom" constant="7" id="dbv-sw-6qv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cgs-Ji-qEc" secondAttribute="trailing" constant="18" id="doJ-SP-UFt"/>
+                            <constraint firstItem="Gkx-ms-3d8" firstAttribute="top" secondItem="8WA-D1-Oza" secondAttribute="top" id="f7P-Y4-KmR"/>
+                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="firstBaseline" secondItem="Hf3-Wf-web" secondAttribute="firstBaseline" id="fee-pm-deq"/>
+                            <constraint firstItem="S5l-bw-Cqz" firstAttribute="top" secondItem="ZkA-Ud-Ck1" secondAttribute="bottom" constant="74" id="fev-QP-37R"/>
+                            <constraint firstItem="l1g-cD-xou" firstAttribute="trailing" secondItem="8WA-D1-Oza" secondAttribute="trailing" constant="-100" id="gWh-aM-qyS"/>
+                            <constraint firstItem="imv-rN-vcj" firstAttribute="baseline" secondItem="TFm-dJ-8e0" secondAttribute="firstBaseline" id="gxh-bj-Pzl"/>
+                            <constraint firstItem="SEK-t6-1GD" firstAttribute="leading" secondItem="ZkA-Ud-Ck1" secondAttribute="leading" constant="99" id="hcx-37-EKA"/>
+                            <constraint firstItem="9fc-Yv-mTu" firstAttribute="centerX" secondItem="c62-Un-rfE" secondAttribute="centerX" constant="-1" id="ius-S7-1ZA"/>
+                            <constraint firstItem="pB7-85-Jt8" firstAttribute="leading" secondItem="ZkA-Ud-Ck1" secondAttribute="trailing" constant="32" id="k31-e4-CxN"/>
+                            <constraint firstItem="Gkx-ms-3d8" firstAttribute="top" secondItem="3Tl-9Y-g55" secondAttribute="bottom" constant="9" id="laD-N5-V1L"/>
+                            <constraint firstItem="cIy-ek-Y5J" firstAttribute="top" secondItem="IxC-7p-0FO" secondAttribute="bottom" constant="129" id="ogI-lt-05v"/>
+                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-6" id="s6w-Nj-rwS"/>
+                            <constraint firstItem="SEK-t6-1GD" firstAttribute="top" secondItem="Gkx-ms-3d8" secondAttribute="bottom" constant="44" id="t4V-HZ-TG6"/>
+                            <constraint firstItem="imv-rN-vcj" firstAttribute="top" secondItem="SEK-t6-1GD" secondAttribute="bottom" constant="6.5" id="vT8-io-AGg"/>
+                            <constraint firstItem="l1g-cD-xou" firstAttribute="top" secondItem="S5l-bw-Cqz" secondAttribute="bottom" constant="68" id="xyL-HL-F19"/>
+                            <constraint firstItem="8WA-D1-Oza" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-8.25" id="z7l-s5-lYk"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="InvaderMissles_MaxNumber" destination="Gkx-ms-3d8" id="YEn-ov-Wd0"/>
-                        <outlet property="InvaderMissles_MaxNumberLabel" destination="Jo1-U1-uoT" id="Nna-2h-k5N"/>
-                        <outlet property="InvaderShipSpeed" destination="IxC-7p-0FO" id="wko-EU-dO1"/>
-                        <outlet property="InvaderShipSpeedLabel" destination="imv-rN-vcj" id="FUW-79-2M6"/>
-                        <outlet property="InvaderShip_InitialNumberLabel" destination="u3w-0P-MEu" id="bd3-NT-eT9"/>
-                        <outlet property="InvaderShip_ReinforcementNumberLabel" destination="YOm-Td-ffx" id="OvF-7s-2JD"/>
-                        <outlet property="InvaderShips_FiringRateLabel" destination="1EO-2H-HvX" id="Rcq-Tr-jsU"/>
-                        <outlet property="Invader_FiringRate" destination="Gkx-ms-3d8" id="VdY-K3-dEk"/>
-                        <outlet property="Invader_NumberOfShots" destination="qQZ-dc-n0p" id="Q0l-Cb-dvn"/>
-                        <outlet property="Invader_NumberOfShotsLabel" destination="qS5-Fb-K2Y" id="t55-3E-fWL"/>
-                        <outlet property="NumberOfShipsLabel" destination="xU1-0o-YSY" id="aR5-Db-6SY"/>
-                        <outlet property="ShieldStrengthLabel" destination="6Ag-hq-VPq" id="R8B-Ig-MvJ"/>
-                        <outlet property="ShotCycleTimeLabel" destination="kFG-jv-eLk" id="z0u-4Y-LuO"/>
+                        <outlet property="Defender_FiringRateLabel" destination="Hf3-Wf-web" id="Esk-JO-abV"/>
+                        <outlet property="Defender_FiringRateStepper" destination="8WA-D1-Oza" id="o77-xR-ss6"/>
+                        <outlet property="Defender_NumberOfShotsLabel" destination="Cgs-Ji-qEc" id="3C8-On-3Yg"/>
+                        <outlet property="Defender_NumberOfShotsStepper" destination="TwN-EZ-J6H" id="DNr-j9-FbN"/>
+                        <outlet property="Invader_FiringRateLabel" destination="3Tl-9Y-g55" id="EcP-rd-eS8"/>
+                        <outlet property="Invader_FiringRateStepper" destination="Gkx-ms-3d8" id="DWq-lg-ddQ"/>
+                        <outlet property="Invader_NumberOfShotsStepper" destination="qQZ-dc-n0p" id="8Vv-MG-Wdo"/>
+                        <outlet property="Invader_ShipSpeedLabel" destination="imv-rN-vcj" id="MlW-vX-4zP"/>
+                        <outlet property="Invader_ShipSpeedStepper" destination="IxC-7p-0FO" id="9ie-4P-WaM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4e-Ap-Yhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="125.4872563718141"/>
+            <point key="canvasLocation" x="753.75" y="123.59154929577466"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>

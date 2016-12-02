@@ -27,7 +27,7 @@ class GameViewController: UIViewController {
   
  var pause = false
  var SettingVC : SettingsViewController = SettingsViewController()
-  var gameScene : GameScene = GameScene()
+  var gameScene : GameScene!
   
  
   @IBAction func SettingsButton(_ sender: UIButton) {
@@ -93,7 +93,7 @@ class GameViewController: UIViewController {
     
     if segue.identifier == "presentSettings" {
       self.SettingVC  = segue.destination as! SettingsViewController
-     // SettingVC.pause = true
+      SettingVC.pause = true
       gameScene.pause = true
       SettingVC.gameScene = self.gameScene
     //  SettingVC.restoreSettings()

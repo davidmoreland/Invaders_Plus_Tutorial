@@ -17,39 +17,71 @@ class SettingsViewController: UIViewController {
     var pause : Bool = true
     var gameScene : GameScene!
     var GameVC : GameViewController!
-
-     let settingsData = UserDefaults.standard
+    var settings : Settings = Settings()
     
+    var numberOfShotsText : String = "0"
     
-    // Invaders -- Number of Shots On screen
-    @IBOutlet weak var Invader_NumberOfShotsLabel: UILabel!
+// Invaders -- Number of Shots On screen
+    @IBOutlet weak var Invader_NumberOfShotsLabel: UILabel! { willSet(numberOfShotsText) {
+        
+        
+        }
+    }
     
-
-    @IBOutlet weak var Invader_NumberOfShots: UIStepper!
-    
-    
-
-    // Missles
-      @IBAction func NumberOfShots(_ sender: UIStepper) {
+    @IBOutlet weak var Invader_NumberOfShotsStepper: UIStepper!
+      @IBAction func Invader_NumberOfShotsStepper(_ sender: UIStepper) {
         Invader_NumberOfShotsLabel.text = "\(Int(sender.value))"
-    
+        numberOfShotsText = "\(Int(sender.value))"
         
     }
     
-    // Invaders -- Firing Rate
-    @IBOutlet weak var Invader_FiringRate: UIStepper!
+    
+    
+// Invaders -- Firing Rate
+    
+    @IBOutlet weak var Invader_FiringRateLabel: UILabel!
+    @IBOutlet weak var Invader_FiringRateStepper: UIStepper!
+    @IBAction func Invader_FiringRateStepper(_ sender: UIStepper) {
+        Invader_FiringRateLabel.text  = "\(Int(sender.value))"
+    }
+    
+    
+    @IBOutlet weak var Invader_ShipSpeedLabel: UILabel!
+    
+    @IBOutlet weak var Invader_ShipSpeedStepper: UIStepper!
+    
+    @IBAction func Invader_ShipSpeedStepper(_ sender: UIStepper) {
+        
+        Invader_ShipSpeedLabel.text = "\(Int(sender.value))"
+        let timePerMove = (TimeInterval(sender.value))
+        
+        gameScene.timePerMove = timePerMove
+        gameScene.timePerMove = settings.ShipSpeed(time: timePerMove)
+        
+    }
+    
+    
+    
+    
+    
+ //Defender
+    @IBOutlet weak var Defender_NumberOfShotsLabel: UILabel!
+    @IBOutlet weak var Defender_NumberOfShotsStepper: UIStepper!
+    @IBAction func Defender_NumberOfShotsStepper(_ sender: UIStepper) {
+        
+         Defender_NumberOfShotsLabel.text = "\(Int(sender.value))"
+    }
+    
+    @IBOutlet weak var Defender_FiringRateLabel: UILabel!
+    
+    @IBOutlet weak var Defender_FiringRateStepper: UIStepper!
+    
+    @IBAction func Defender_FiringRateStepper(_ sender: UIStepper) {
+        Defender_FiringRateLabel.text  = "\(Int(sender.value))"
+    }
+    
     
 
-    @IBOutlet weak var InvaderShips_FiringRateLabel: UILabel!
-    
-    
-    
-    @IBAction func InvaderFiringRate(_ sender: UIStepper) {
-        
-        InvaderShips_FiringRateLabel.text  = "\(Int(sender.value))"
-    }
-    
-    
     
     // Screen Missles
     @IBOutlet weak var InvaderMissles_MaxNumberLabel: UILabel!
@@ -82,27 +114,6 @@ class SettingsViewController: UIViewController {
     // Ships
     @IBOutlet weak var InvaderShip_InitialNumberLabel: UILabel!
     
-    @IBOutlet weak var InvaderShipSpeedLabel: UILabel!
-    
-       
-    @IBOutlet weak var InvaderShipSpeed: UIStepper!
-    
-    @IBAction func InvaderShipSpeed(_ sender: UIStepper) {
-
-     
-        
-        let speed  = InvaderShipSpeedLabel.text = "\(Int(sender.value))"
-        
-        self.settingsData.setValue(speed, forKey: "InvaderShipSpeed")
-        
-        let timePerMove = (TimeInterval(sender.value))
-        
-        
-   //     gameScene.timePerMove = timePerMove
-  //  gameScene.timePerMove = Settings().ShipSpeed(time: timePerMove)
-    
-        }
-
     
     
     @IBOutlet weak var InvaderShip_ReinforcementNumberLabel: UILabel!
@@ -123,10 +134,30 @@ class SettingsViewController: UIViewController {
         
     }
     
+    override func viewDidLoad() {
+ //      self.reloadSettings()
+    }
+    
+    func reloadSettings() {
+        Invader_ShipSpeedLabel.text = UserDefaults.standard.string(forKey: "InvaderShipSpeed")
+        
+        let shipSpeed = UserDefaults.standard.string(forKey: "InvaderShipSpeed")
+        
+        Invader_ShipSpeedStepper.value = (Double(shipSpeed!))!
+        
+    }
+
+    
+    
     func updateSettings() {
-     //   GameScene.timePerMove = (TimeInterval(InvaderShipSpeedLabel.text!))!
-        settingsData.setValue(InvaderShipSpeedLabel.text, forKey: "InvaderShipSpeed")
-        settingsData.setValue(InvaderShips_FiringRateLabel.text, forKey: "InvaderFiringRate")
+    
+        UserDefaults.standard.set(Invader_ShipSpeedLabel.text, forKey: "InvaderShipSpeed")
+        
+        
+        
+        print("InvaderShipSpeed: \(UserDefaults.standard.string(forKey: "InvaderShipSpeed"))")
+            
+   //     settingsData.setValue(InvaderShips_FiringRateLabel.text, forKey: "InvaderFiringRate")
         
         gameScene.pause = false
         
@@ -136,7 +167,7 @@ class SettingsViewController: UIViewController {
     
     func restoreSettings()
     {
-        InvaderShipSpeedLabel.text = settingsData.string(forKey: "InvaderShipSpeed")
+   
         
     }
 }

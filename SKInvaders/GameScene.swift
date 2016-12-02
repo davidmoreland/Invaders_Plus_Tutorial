@@ -33,6 +33,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 var pause = false;
     var settingsVC : SettingsViewController!
     
+   // let GameOverScene.gameScene = self
+    
   // Private GameScene Properties
     
     // Device Properties
@@ -122,7 +124,7 @@ var pause = false;
     
     // Hud
     let kScoreHudName = "scoreHud"
-    let kHealthHudName = "helathHud"
+    let kHealthHudName = "healthHud"
     var score: Int = 0
     var shipHealth: Float = 1.0
     
@@ -805,6 +807,9 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             
             //3: 
             let gameOverScene: GameOverScene = GameOverScene(size: size)
+         
+            
+            gameOverScene.gameScene = self
             
             view?.presentScene(gameOverScene, transition: SKTransition.doorsOpenHorizontal(withDuration: 1.0))
         }
