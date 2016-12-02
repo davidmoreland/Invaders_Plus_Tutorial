@@ -19,14 +19,17 @@ class SettingsViewController: UIViewController {
     var GameVC : GameViewController!
     var settings : Settings = Settings()
     
+    
     var numberOfShotsText : String = "0"
+    
+    
     
 // Invaders -- Number of Shots On screen
     @IBOutlet weak var Invader_NumberOfShotsLabel: UILabel! { willSet(numberOfShotsText) {
         
-        
         }
     }
+    
     
     @IBOutlet weak var Invader_NumberOfShotsStepper: UIStepper!
       @IBAction func Invader_NumberOfShotsStepper(_ sender: UIStepper) {
@@ -80,7 +83,20 @@ class SettingsViewController: UIViewController {
         Defender_FiringRateLabel.text  = "\(Int(sender.value))"
     }
     
+    @IBOutlet weak var Defender_ShipSpeedLabel: UILabel!
     
+    @IBOutlet weak var Defender_ShipSpeedStepper: UIStepper!
+    
+    @IBAction func Defender_ShipSpeedStepper(_ sender: UIStepper) {
+        
+        Invader_ShipSpeedLabel.text = "\(Int(sender.value))"
+        let timePerMove = (TimeInterval(sender.value))
+        
+        gameScene.timePerMove = timePerMove
+        gameScene.timePerMove = settings.ShipSpeed(time: timePerMove)
+        
+    }
+
 
     
     // Screen Missles
@@ -135,11 +151,16 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewDidLoad() {
- //      self.reloadSettings()
+     self.reloadSettings()
     }
     
+    
+    
     func reloadSettings() {
-        Invader_ShipSpeedLabel.text = UserDefaults.standard.string(forKey: "InvaderShipSpeed")
+        if (UserDefaults.standard.string(forKey: "InvaderShipSpeed") == nil)
+        {
+            restoreSettings()
+        }
         
         let shipSpeed = UserDefaults.standard.string(forKey: "InvaderShipSpeed")
         
@@ -167,7 +188,13 @@ class SettingsViewController: UIViewController {
     
     func restoreSettings()
     {
-   
+       
+       Invader_ShipSpeedLabel.text = UserDefaults.standard.string(forKey: "InvaderShipSpeed")
+      Invader_NumberOfShotsLabel.text =  UserDefaults.standard.string(forKey: "InvaderNumberOfShots")
+      Invader_FiringRateLabel.text =   UserDefaults.standard.string(forKey: "InvaderFiringRate")
+      Defender_ShipSpeedLabel.text =  UserDefaults.standard.string(forKey: "DefenderShipSpeed")
+      Defender_NumberOfShotsLabel.text = UserDefaults.standard.string(forKey: "DefenderNumberOfShots")
+      Defender_FiringRateLabel.text =   UserDefaults.standard.string(forKey: "DefenderFiringRate")
         
     }
 }

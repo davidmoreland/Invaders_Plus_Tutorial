@@ -38,7 +38,18 @@
 		F63C736A1DE5F16F00E98DC3 /* InvaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C73691DE5F16F00E98DC3 /* InvaderController.swift */; };
 		F63C736C1DE5F25200E98DC3 /* Invader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C736B1DE5F25200E98DC3 /* Invader.swift */; };
 		F63C736F1DEE59BC00E98DC3 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F63C736E1DEE59BC00E98DC3 /* Settings.plist */; };
+		F6BE38D21DF12D28003DBAB2 /* Invaders_PlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BE38D11DF12D28003DBAB2 /* Invaders_PlusTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6BE38D41DF12D28003DBAB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDF079C21975428800FFAB46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDF079C91975428800FFAB46;
+			remoteInfo = "Invaders-Plus";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CDF079CA1975428800FFAB46 /* Invaders-Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Invaders-Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,10 +85,20 @@
 		F63C73691DE5F16F00E98DC3 /* InvaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvaderController.swift; sourceTree = "<group>"; };
 		F63C736B1DE5F25200E98DC3 /* Invader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invader.swift; sourceTree = "<group>"; };
 		F63C736E1DEE59BC00E98DC3 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		F6BE38CF1DF12D28003DBAB2 /* Invaders-PlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Invaders-PlusTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6BE38D11DF12D28003DBAB2 /* Invaders_PlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invaders_PlusTests.swift; sourceTree = "<group>"; };
+		F6BE38D31DF12D28003DBAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CDF079C71975428800FFAB46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6BE38CC1DF12D28003DBAB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,6 +113,7 @@
 			children = (
 				F6289D2E1DE157EA00ABFF9E /* Assets */,
 				CDF079CC1975428800FFAB46 /* Invaders */,
+				F6BE38D01DF12D28003DBAB2 /* Invaders-PlusTests */,
 				CDF079CB1975428800FFAB46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CDF079CA1975428800FFAB46 /* Invaders-Plus.app */,
+				F6BE38CF1DF12D28003DBAB2 /* Invaders-PlusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +214,15 @@
 			name = Actors;
 			sourceTree = "<group>";
 		};
+		F6BE38D01DF12D28003DBAB2 /* Invaders-PlusTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6BE38D11DF12D28003DBAB2 /* Invaders_PlusTests.swift */,
+				F6BE38D31DF12D28003DBAB2 /* Info.plist */,
+			);
+			path = "Invaders-PlusTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +243,24 @@
 			productReference = CDF079CA1975428800FFAB46 /* Invaders-Plus.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F6BE38CE1DF12D28003DBAB2 /* Invaders-PlusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6BE38D81DF12D28003DBAB2 /* Build configuration list for PBXNativeTarget "Invaders-PlusTests" */;
+			buildPhases = (
+				F6BE38CB1DF12D28003DBAB2 /* Sources */,
+				F6BE38CC1DF12D28003DBAB2 /* Frameworks */,
+				F6BE38CD1DF12D28003DBAB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6BE38D51DF12D28003DBAB2 /* PBXTargetDependency */,
+			);
+			name = "Invaders-PlusTests";
+			productName = "Invaders-PlusTests";
+			productReference = F6BE38CF1DF12D28003DBAB2 /* Invaders-PlusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0730;
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Razeware;
 				TargetAttributes = {
@@ -227,9 +277,15 @@
 						DevelopmentTeam = QZJ2GF69ZP;
 						LastSwiftMigration = 0800;
 					};
+					F6BE38CE1DF12D28003DBAB2 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = QZJ2GF69ZP;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CDF079C91975428800FFAB46;
+					};
 				};
 			};
-			buildConfigurationList = CDF079C51975428800FFAB46 /* Build configuration list for PBXProject "Invaders-Plus" */;
+			buildConfigurationList = CDF079C51975428800FFAB46 /* Build configuration list for PBXProject "InvadersPlus" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -243,6 +299,7 @@
 			projectRoot = "";
 			targets = (
 				CDF079C91975428800FFAB46 /* Invaders-Plus */,
+				F6BE38CE1DF12D28003DBAB2 /* Invaders-PlusTests */,
 			);
 		};
 /* End PBXProject section */
@@ -278,6 +335,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6BE38CD1DF12D28003DBAB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -296,7 +360,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6BE38CB1DF12D28003DBAB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6BE38D21DF12D28003DBAB2 /* Invaders_PlusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6BE38D51DF12D28003DBAB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDF079C91975428800FFAB46 /* Invaders-Plus */;
+			targetProxy = F6BE38D41DF12D28003DBAB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CDF079D71975428800FFAB46 /* Main.storyboard */ = {
@@ -423,10 +503,52 @@
 			};
 			name = Release;
 		};
+		F6BE38D61DF12D28003DBAB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = QZJ2GF69ZP;
+				INFOPLIST_FILE = "Invaders-PlusTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dcmoreland.Invaders-PlusTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Invaders-Plus.app/Invaders-Plus";
+			};
+			name = Debug;
+		};
+		F6BE38D71DF12D28003DBAB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QZJ2GF69ZP;
+				INFOPLIST_FILE = "Invaders-PlusTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dcmoreland.Invaders-PlusTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Invaders-Plus.app/Invaders-Plus";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CDF079C51975428800FFAB46 /* Build configuration list for PBXProject "Invaders-Plus" */ = {
+		CDF079C51975428800FFAB46 /* Build configuration list for PBXProject "InvadersPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDF079E81975428800FFAB46 /* Debug */,
@@ -443,6 +565,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F6BE38D81DF12D28003DBAB2 /* Build configuration list for PBXNativeTarget "Invaders-PlusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6BE38D61DF12D28003DBAB2 /* Debug */,
+				F6BE38D71DF12D28003DBAB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

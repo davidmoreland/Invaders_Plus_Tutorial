@@ -83,7 +83,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-dc-n0p" userLabel="Invader_NumShotsStepper">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-dc-n0p" userLabel="Invader_NumShotsStepper">
                                 <rect key="frame" x="12" y="173" width="94" height="29"/>
                                 <connections>
                                     <action selector="Invader_NumberOfShotsStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="K3X-ft-DWG"/>
@@ -119,13 +119,13 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-EZ-J6H" userLabel="Defender_NumShotsStepper">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-EZ-J6H" userLabel="Defender_NumShotsStepper">
                                 <rect key="frame" x="215" y="173" width="94" height="29"/>
                                 <connections>
                                     <action selector="Defender_NumberOfShotsStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="0JQ-zI-VON"/>
                                 </connections>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="8WA-D1-Oza" userLabel="InvaderFiringRateStepper">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="8WA-D1-Oza" userLabel="InvaderFiringRateStepper">
                                 <rect key="frame" x="213" y="283" width="94" height="29"/>
                                 <connections>
                                     <action selector="DefenderFiringRate:" destination="waj-Rr-O8y" eventType="valueChanged" id="cJb-Ba-d5F"/>
@@ -172,14 +172,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-ms-3d8" userLabel="Invader_FiringRateStepper">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-ms-3d8" userLabel="Invader_FiringRateStepper">
                                 <rect key="frame" x="10" y="283" width="94" height="29"/>
                                 <connections>
                                     <action selector="Invader_FiringRateStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="HWT-zB-cdP"/>
                                 </connections>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-hy-Pgb" userLabel="Defender_FiringRateStepper">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-hy-Pgb" userLabel="Defender_FiringRateStepper">
                                 <rect key="frame" x="210" y="409" width="94" height="29"/>
+                                <connections>
+                                    <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="G3Y-2g-EfU"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="imv-rN-vcj" userLabel="Invader-Result Ship Speed Label">
                                 <rect key="frame" x="32" y="383" width="50" height="19"/>
@@ -190,7 +193,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="IxC-7p-0FO" userLabel="Invader_ShipSpeedStepper">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="IxC-7p-0FO" userLabel="Invader_ShipSpeedStepper">
                                 <rect key="frame" x="10" y="410" width="94" height="29"/>
                                 <connections>
                                     <action selector="Invader_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="L07-H3-2O5"/>
@@ -304,8 +307,11 @@
                         <outlet property="Defender_FiringRateStepper" destination="8WA-D1-Oza" id="o77-xR-ss6"/>
                         <outlet property="Defender_NumberOfShotsLabel" destination="Cgs-Ji-qEc" id="3C8-On-3Yg"/>
                         <outlet property="Defender_NumberOfShotsStepper" destination="TwN-EZ-J6H" id="DNr-j9-FbN"/>
+                        <outlet property="Defender_ShipSpeedLabel" destination="TFm-dJ-8e0" id="afR-aB-dwk"/>
+                        <outlet property="Defender_ShipSpeedStepper" destination="Nem-hy-Pgb" id="RpS-Ta-DoO"/>
                         <outlet property="Invader_FiringRateLabel" destination="3Tl-9Y-g55" id="EcP-rd-eS8"/>
                         <outlet property="Invader_FiringRateStepper" destination="Gkx-ms-3d8" id="DWq-lg-ddQ"/>
+                        <outlet property="Invader_NumberOfShotsLabel" destination="3aL-Rk-j64" id="eVZ-2h-f6o"/>
                         <outlet property="Invader_NumberOfShotsStepper" destination="qQZ-dc-n0p" id="8Vv-MG-Wdo"/>
                         <outlet property="Invader_ShipSpeedLabel" destination="imv-rN-vcj" id="MlW-vX-4zP"/>
                         <outlet property="Invader_ShipSpeedStepper" destination="IxC-7p-0FO" id="9ie-4P-WaM"/>

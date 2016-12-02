@@ -17,7 +17,7 @@
                BlueprintIdentifier = "CDF079C91975428800FFAB46"
                BuildableName = "Invaders-Plus.app"
                BlueprintName = "Invaders-Plus"
-               ReferencedContainer = "container:Invaders-Plus.xcodeproj">
+               ReferencedContainer = "container:InvadersPlus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F6BE38CE1DF12D28003DBAB2"
+               BuildableName = "Invaders-PlusTests.xctest"
+               BlueprintName = "Invaders-PlusTests"
+               ReferencedContainer = "container:InvadersPlus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -35,7 +45,7 @@
             BlueprintIdentifier = "CDF079C91975428800FFAB46"
             BuildableName = "Invaders-Plus.app"
             BlueprintName = "Invaders-Plus"
-            ReferencedContainer = "container:Invaders-Plus.xcodeproj">
+            ReferencedContainer = "container:InvadersPlus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +68,7 @@
             BlueprintIdentifier = "CDF079C91975428800FFAB46"
             BuildableName = "Invaders-Plus.app"
             BlueprintName = "Invaders-Plus"
-            ReferencedContainer = "container:Invaders-Plus.xcodeproj">
+            ReferencedContainer = "container:InvadersPlus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +87,7 @@
             BlueprintIdentifier = "CDF079C91975428800FFAB46"
             BuildableName = "Invaders-Plus.app"
             BlueprintName = "Invaders-Plus"
-            ReferencedContainer = "container:Invaders-Plus.xcodeproj">
+            ReferencedContainer = "container:InvadersPlus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
