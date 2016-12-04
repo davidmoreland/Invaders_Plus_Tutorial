@@ -70,13 +70,16 @@ class SettingsViewController: UIViewController {
         
         let timePerMove = (TimeInterval(sender.value))
         
+        settings.invaderTimePerMove = timePerMove
+        
       //  gameScene.timePerMove = timePerMove
         
         print("TimePerMove: \(timePerMove)")
-        
+        /*
         gameScene.timePerMove = settings.ShipSpeed(time: timePerMove)
         print("GameScene -- TimePerMove: \(gameScene.timePerMove)")
-    }
+ */   
+ }
     
     
     

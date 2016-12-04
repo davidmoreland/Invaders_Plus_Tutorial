@@ -44,7 +44,7 @@ class GameOverScene: SKScene {
     
     func createContent() {
         
-        let gameOverLabel = SKLabelNode(fontNamed: "Courier")
+    let gameOverLabel = SKLabelNode(fontNamed: "Courier")
         gameOverLabel.fontSize = 50
         gameOverLabel.fontColor = SKColor.white
         gameOverLabel.text = "Game Over!"

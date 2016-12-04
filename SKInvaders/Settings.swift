@@ -24,6 +24,15 @@ class Settings: NSObject {
     
     var defenderFiringRate: String = "1"
     
+    var invaderTimePerMove: TimeInterval = 1.0 {
+        didSet {
+            print("TimePerMove changed from \(oldValue) to \(invaderTimePerMove)")
+        }
+    }
+    
+    
+       
+    
     
     // Default
     func EasyGamePlay() {
@@ -58,6 +67,7 @@ class Settings: NSObject {
             UserDefaults.standard.setValue("1", forKey:  "DefenderShipSpeed")
             UserDefaults.standard.setValue("1", forKey:  "DefenderNumberOfShots")
             UserDefaults.standard.setValue("1", forKey:  "DefenderFiringRate")
+            UserDefaults.standard.setValue(1.0, forKey: "InvaderTimePerMove")
                       
         }
     }
@@ -69,13 +79,15 @@ class Settings: NSObject {
         UserDefaults.standard.setValue(self.defenderShipSpeed, forKey:  "DefenderShipSpeed")
         UserDefaults.standard.setValue(self.defenderNumberOfShots, forKey:  "DefenderNumberOfShots")
         UserDefaults.standard.setValue(self.defenderFiringRate, forKey:  "DefenderFiringRate")
+        UserDefaults.standard.setValue(self.invaderTimePerMove, forKey: "InvaderTimePerMove")
         
     }
     
                
         func loadGameSettings() {
             
-           self.invaderShipSpeed = UserDefaults.standard.string(forKey: "InvaderShipSpeed")!
+            self.invaderShipSpeed = UserDefaults.standard.string(forKey: "InvaderShipSpeed")!
+            self.invaderTimePerMove = UserDefaults.standard.double(forKey: "InvaderTimePerMove")
             self.invaderNumberOfShots = UserDefaults.standard.string(forKey:  "InvaderNumberOfShots")!
             self.invaderFiringRate = UserDefaults.standard.string(forKey:   "InvaderFiringRate")!
             self.defenderShipSpeed = UserDefaults.standard.string(forKey: "DefenderShipSpeed")!

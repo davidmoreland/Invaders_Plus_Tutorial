@@ -110,10 +110,13 @@ var pause = false;
 
  /*  Moved to 'Invader' */
     //3:  Invaders take 1 second for each move. Each step left, right or down takes 1 second.
-    var timePerMove: TimeInterval = 1.0
+    var timePerMove: TimeInterval = 1.0 {didSet {
+        UserDefaults.standard.set((TimeInterval(settings.ShipSpeed(time: settings.invaderTimePerMove))), forKey: "InvaderTimePerMove") }
+    }
+    
    
     
- //  timePerMove = settings.ShipSpeed(timePerMove)
+  // timePerMove = settings.ShipSpeed(timePerMove)
  
 // Display Properties
     
@@ -144,7 +147,6 @@ var pause = false;
 
         motionManager.startAccelerometerUpdates()
         physicsWorld.contactDelegate = self
-        
           }
     }
  
@@ -391,8 +393,6 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
         
         
         return ship
-        
-        
     }
     
     
@@ -429,7 +429,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
                     print("Acceleration X: \(data.acceleration.x)")
                     print("Acceleration Y: \(data.acceleration.y)")
  */
- }
+                }
             
             }
         }

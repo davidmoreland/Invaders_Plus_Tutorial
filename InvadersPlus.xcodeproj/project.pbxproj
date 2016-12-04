@@ -39,6 +39,10 @@
 		F63C736C1DE5F25200E98DC3 /* Invader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C736B1DE5F25200E98DC3 /* Invader.swift */; };
 		F63C736F1DEE59BC00E98DC3 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F63C736E1DEE59BC00E98DC3 /* Settings.plist */; };
 		F6BE38D21DF12D28003DBAB2 /* InvadersPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BE38D11DF12D28003DBAB2 /* InvadersPlusTests.swift */; };
+		F6BE38DA1DF23015003DBAB2 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BE38D91DF23015003DBAB2 /* Bullet.swift */; };
+		F6BE38DB1DF23015003DBAB2 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BE38D91DF23015003DBAB2 /* Bullet.swift */; };
+		F6BE38DD1DF2303B003DBAB2 /* Defender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BE38DC1DF2303B003DBAB2 /* Defender.swift */; };
+		F6BE38DE1DF2303B003DBAB2 /* Defender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BE38DC1DF2303B003DBAB2 /* Defender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,8 @@
 		F6BE38CF1DF12D28003DBAB2 /* InvadersPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvadersPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6BE38D11DF12D28003DBAB2 /* InvadersPlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvadersPlusTests.swift; sourceTree = "<group>"; };
 		F6BE38D31DF12D28003DBAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6BE38D91DF23015003DBAB2 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
+		F6BE38DC1DF2303B003DBAB2 /* Defender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				F63C736D1DE5FCD300E98DC3 /* Actors */,
-				F63C736B1DE5F25200E98DC3 /* Invader.swift */,
 				F63C73681DE5F0ED00E98DC3 /* New Group */,
 				CDF079F01975453100FFAB46 /* Assets */,
 				CDF079CF1975428800FFAB46 /* AppDelegate.swift */,
@@ -210,6 +215,9 @@
 		F63C736D1DE5FCD300E98DC3 /* Actors */ = {
 			isa = PBXGroup;
 			children = (
+				F63C736B1DE5F25200E98DC3 /* Invader.swift */,
+				F6BE38D91DF23015003DBAB2 /* Bullet.swift */,
+				F6BE38DC1DF2303B003DBAB2 /* Defender.swift */,
 			);
 			name = Actors;
 			sourceTree = "<group>";
@@ -356,8 +364,10 @@
 				CDF07A1A1975510100FFAB46 /* GameOverScene.swift in Sources */,
 				CDF079D01975428800FFAB46 /* AppDelegate.swift in Sources */,
 				F63C736A1DE5F16F00E98DC3 /* InvaderController.swift in Sources */,
+				F6BE38DD1DF2303B003DBAB2 /* Defender.swift in Sources */,
 				F6289D2B1DE10AA700ABFF9E /* Settings.swift in Sources */,
 				F6289D2D1DE10B8100ABFF9E /* SettingsViewController.swift in Sources */,
+				F6BE38DA1DF23015003DBAB2 /* Bullet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +376,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6BE38D21DF12D28003DBAB2 /* InvadersPlusTests.swift in Sources */,
+				F6BE38DE1DF2303B003DBAB2 /* Defender.swift in Sources */,
+				F6BE38DB1DF23015003DBAB2 /* Bullet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +586,7 @@
 				F6BE38D71DF12D28003DBAB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
