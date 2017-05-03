@@ -62,6 +62,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func Invader_ShipSpeedStepper(_ sender: UIStepper) {
         
+    
         let speed = "\(Int(sender.value))"
         
         Invader_ShipSpeedLabel.text = speed
@@ -72,13 +73,14 @@ class SettingsViewController: UIViewController {
         
         settings.invaderTimePerMove = timePerMove
         
-      //  gameScene.timePerMove = timePerMove
-        
         print("TimePerMove: \(timePerMove)")
-        /*
+    
+        // should be in 'Settings' not here.
         gameScene.timePerMove = settings.ShipSpeed(time: timePerMove)
+
+    
         print("GameScene -- TimePerMove: \(gameScene.timePerMove)")
- */   
+
  }
     
     
@@ -188,6 +190,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
      settings.loadGameSettings()
+        gameScene.pause = true
         
         print("loadGameSettings: InvaderShipSpeed \(settings.invaderShipSpeed)")
         self.updateSettingsUILabels()
@@ -220,7 +223,7 @@ class SettingsViewController: UIViewController {
         Defender_FiringRateLabel.text = settings.defenderFiringRate
         Defender_NumberOfShotsLabel.text = settings.defenderNumberOfShots
         
-        print("InvaderShipSpeed_Label: \(Invader_ShipSpeedLabel.text)")
+    //    print("InvaderShipSpeed_Label: \(Invader_ShipSpeedLabel.text)")
         
             
            gameScene.pause = false

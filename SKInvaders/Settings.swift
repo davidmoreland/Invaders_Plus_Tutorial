@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import SceneKit
 
 class Settings: NSObject {
 
+    var gameScene: GameScene!
+    
     let SettingsVC : SettingsViewController? = nil
     
     var invaderShipSpeed : String = "1"
@@ -27,6 +30,8 @@ class Settings: NSObject {
     var invaderTimePerMove: TimeInterval = 1.0 {
         didSet {
             print("TimePerMove changed from \(oldValue) to \(invaderTimePerMove)")
+            
+        
         }
     }
     
@@ -60,8 +65,8 @@ class Settings: NSObject {
     
     func resetGameSettings() {
         if UserDefaults.standard.string(forKey: "Invader_ShipSpeed") == nil {
-            UserDefaults.standard.setValue("1", forKey: "InvaderShipSpeed")
-            UserDefaults.standard.setValue("1", forKey: "InvaderShipSpeed")
+            UserDefaults.standard.setValue(1.0, forKey: "InvaderShipSpeed")
+        //    UserDefaults.standard.setValue("1", forKey: "InvaderShipSpeed")
             UserDefaults.standard.setValue("1", forKey: "InvaderNumberOfShots")
             UserDefaults.standard.setValue("1", forKey:  "InvaderFiringRate")
             UserDefaults.standard.setValue("1", forKey:  "DefenderShipSpeed")

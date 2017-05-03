@@ -82,13 +82,14 @@ class Invaders_PlusTests: XCTestCase {
         //Test Data
         settings.defenderFiringRate = "10"
         settings.defenderNumberOfShots = "10"
-        settings.defenderShipSpeed = "10"
+        settings.defenderShipSpeed = "5"
+
         settings.invaderFiringRate = "10"
         settings.invaderNumberOfShots = "10"
         settings.invaderShipSpeed = "10"
-        settings.invaderTimePerMove = 5.0
+        settings.invaderTimePerMove = (Settings().ShipSpeed(time: (TimeInterval(settings.invaderShipSpeed))!))
         
-   // Test Function
+   // Test Function)
         settings.saveGameSettings()
         
         

@@ -31,6 +31,9 @@ class GameOverScene: SKScene {
     // Object Lifecycle Management
 
     var gameScene : GameScene!
+    var settings : Settings!
+   
+    
     
     // Scene Setup and Content Creation
     
@@ -63,15 +66,16 @@ class GameOverScene: SKScene {
         // black space color
         self.backgroundColor = SKColor.black
         
-        resetGameScene()
-
+       
     }
     
 
     func resetGameScene() {
-        
+        gameScene.pause = true
+       Settings().loadGameSettings()
     
         
+    
     }
     
     

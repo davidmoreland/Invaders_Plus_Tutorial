@@ -51,90 +51,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SKInvaders/GameScene.swift"
-            timestampString = "502430111.877559"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "GameScene"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Invaders_Plus.GameScene.timePerMove.getter : Swift.Double"
-                  moduleName = "Invaders-Plus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
-                  timestampString = "502155110.846242"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Invaders_Plus.GameScene.timePerMove.setter : Swift.Double"
-                  moduleName = "Invaders-Plus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
-                  timestampString = "502155110.848938"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "25">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Invaders_Plus.GameScene.init () -&gt; Invaders_Plus.GameScene"
-                  moduleName = "Invaders-Plus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
-                  timestampString = "502155110.854665"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "465">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Invaders_Plus.GameScene.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Invaders_Plus.GameScene&gt;"
-                  moduleName = "Invaders-Plus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
-                  timestampString = "502155110.857373"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "476">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SKInvaders/GameOverScene.swift"
-            timestampString = "502170423.70154"
+            timestampString = "502847964.813152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "resetGameScene()"
             landmarkType = "7">
          </BreakpointContent>
@@ -156,11 +78,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SKInvaders/Settings.swift"
-            timestampString = "502430111.877559"
+            timestampString = "502845880.975903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "resetGameSettings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -172,11 +94,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SKInvaders/Settings.swift"
-            timestampString = "502430111.877559"
+            timestampString = "502845880.975903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "resetGameSettings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -188,11 +110,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SKInvaders/Settings.swift"
-            timestampString = "502430111.877559"
+            timestampString = "502845880.975903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "resetGameSettings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -204,11 +126,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SKInvaders/Settings.swift"
-            timestampString = "502430111.877559"
+            timestampString = "502845880.975903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "saveGameSettings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -220,11 +142,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SKInvaders/SettingsViewController.swift"
-            timestampString = "502430111.877559"
+            timestampString = "502845880.975903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "SettingsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -236,11 +158,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SKInvaders/SettingsViewController.swift"
-            timestampString = "502430111.877559"
+            timestampString = "502845880.975903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "Defender_FiringRateStepper(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -248,16 +170,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SKInvaders/GameScene.swift"
-            timestampString = "502430111.877559"
+            timestampString = "502960111.818468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "435"
-            endingLineNumber = "435"
-            landmarkName = "proccessingUserMotion(forUpdate:)"
+            startingLineNumber = "624"
+            endingLineNumber = "624"
+            landmarkName = "handle(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

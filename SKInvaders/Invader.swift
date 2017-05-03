@@ -14,6 +14,9 @@ class Invader {
   //  var settings = Settings()
   //  var timeValue = (TimeInterval(UserDefaults.standard.string(forKey:"InvaderShipSpeed")!))
     
+    
+    let kInvaderCategory: UInt32 = 0x1 << 0
+
     var timePerMove = 1.0
    // var timePerMove  = settings.ShipSpeed(timeValue)
 
@@ -78,45 +81,5 @@ func makeInvader(ofType invaderType: InvaderType)-> SKNode {
 }
 
 
-/*
-func setupInvaders() {
-    
-    //  decides on 'type / color of invader using 'makeInvader'
-    let baseOrigin = GameScene.CGPoint(x: size.width / 3, y: size.height / 3)
-    
-    for row in 0..<kInvaderRowCount {
-        
-        // 2: Choose a single InvaderType for all invaders in this row based on the row number.
-        var invaderType: InvaderType
-        
-        if row % 3 == 0 {
-            invaderType = .a
-        } else if row % 3 == 1 {
-            invaderType = .b
-        } else {
-            invaderType = .c
-        }
-        
-        // 3: Do some math to figure out where the first invader in this row should be positioned.
-        let invaderPositionY = CGFloat(row) * (InvaderType.size.height * 2) + baseOrigin.y
-        
-        var invaderPosition = CGPoint(x: baseOrigin.x, y: invaderPositionY)
-        
-        //4: Loop over the columns.
-        for _ in 1..<kInvaderRowCount {
-            
-            //5: Create an invader for the current row and column and add it to the scene.
-            let invader = makeInvader(ofType: invaderType)
-            invader.position = invaderPosition
-            addChild(invader)
-            
-            //6: Update the invaderPosition so that it’s correct for the next invader.
-            invaderPosition = CGPoint(x: invaderPosition.x + InvaderType.size.width + kInvaderGridSpacing.width,
-                                      y:invaderPositionY)
-            
-        }
-    }
-}
-*/
     
 }
