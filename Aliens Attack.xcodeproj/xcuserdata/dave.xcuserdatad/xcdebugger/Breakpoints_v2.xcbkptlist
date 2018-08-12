@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SKInvaders/GameScene.swift"
+            timestampString = "555732872.168635"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "timePerMove"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InvadersPlus.GameScene.timePerMove.didset : Swift.Double"
+                  moduleName = "InvadersPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
+                  timestampString = "555754565.231011"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InvadersPlus.GameScene.init(size: __C.CGSize) -&gt; InvadersPlus.GameScene"
+                  moduleName = "InvadersPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
+                  timestampString = "555754565.237223"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "1605">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InvadersPlus.GameScene.init() -&gt; InvadersPlus.GameScene"
+                  moduleName = "InvadersPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
+                  timestampString = "555754565.239808"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "1573">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InvadersPlus.GameScene.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;InvadersPlus.GameScene&gt;"
+                  moduleName = "InvadersPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac_Developement/Xcode_Projects_2016/Tutorials/Ray%20Winderlinch/Invaders%20Plus%20-%20Mod1/SKInvaders/GameScene.swift"
+                  timestampString = "555754565.242403"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "1468">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

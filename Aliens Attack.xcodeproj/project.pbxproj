@@ -58,7 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CDF079CA1975428800FFAB46 /* InvadersPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvadersPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF079CA1975428800FFAB46 /* Aliens Attack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aliens Attack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF079CE1975428800FFAB46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF079CF1975428800FFAB46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF079D31975428800FFAB46 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		F63C73691DE5F16F00E98DC3 /* InvaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvaderController.swift; sourceTree = "<group>"; };
 		F63C736B1DE5F25200E98DC3 /* Invader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invader.swift; sourceTree = "<group>"; };
 		F63C736E1DEE59BC00E98DC3 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
-		F6BE38CF1DF12D28003DBAB2 /* InvadersPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvadersPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6BE38CF1DF12D28003DBAB2 /* Aliens AttackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aliens AttackTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6BE38D11DF12D28003DBAB2 /* InvadersPlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvadersPlusTests.swift; sourceTree = "<group>"; };
 		F6BE38D31DF12D28003DBAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6BE38D91DF23015003DBAB2 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				F6289D2E1DE157EA00ABFF9E /* Assets */,
-				CDF079CC1975428800FFAB46 /* Invaders */,
+				CDF079CC1975428800FFAB46 /* Source */,
 				F6BE38D01DF12D28003DBAB2 /* InvadersPlusTests */,
 				CDF079CB1975428800FFAB46 /* Products */,
 			);
@@ -130,13 +130,13 @@
 		CDF079CB1975428800FFAB46 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDF079CA1975428800FFAB46 /* InvadersPlus.app */,
-				F6BE38CF1DF12D28003DBAB2 /* InvadersPlusTests.xctest */,
+				CDF079CA1975428800FFAB46 /* Aliens Attack.app */,
+				F6BE38CF1DF12D28003DBAB2 /* Aliens AttackTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CDF079CC1975428800FFAB46 /* Invaders */ = {
+		CDF079CC1975428800FFAB46 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				F63C736D1DE5FCD300E98DC3 /* Actors */,
@@ -153,7 +153,7 @@
 				CDF079CD1975428800FFAB46 /* Supporting Files */,
 				F63C73691DE5F16F00E98DC3 /* InvaderController.swift */,
 			);
-			name = Invaders;
+			name = Source;
 			path = SKInvaders;
 			sourceTree = "<group>";
 		};
@@ -239,9 +239,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CDF079C91975428800FFAB46 /* InvadersPlus */ = {
+		CDF079C91975428800FFAB46 /* Aliens Attack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDF079EA1975428800FFAB46 /* Build configuration list for PBXNativeTarget "InvadersPlus" */;
+			buildConfigurationList = CDF079EA1975428800FFAB46 /* Build configuration list for PBXNativeTarget "Aliens Attack" */;
 			buildPhases = (
 				CDF079C61975428800FFAB46 /* Sources */,
 				CDF079C71975428800FFAB46 /* Frameworks */,
@@ -251,14 +251,14 @@
 			);
 			dependencies = (
 			);
-			name = InvadersPlus;
+			name = "Aliens Attack";
 			productName = SKInvaders;
-			productReference = CDF079CA1975428800FFAB46 /* InvadersPlus.app */;
+			productReference = CDF079CA1975428800FFAB46 /* Aliens Attack.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F6BE38CE1DF12D28003DBAB2 /* InvadersPlusTests */ = {
+		F6BE38CE1DF12D28003DBAB2 /* Aliens AttackTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6BE38D81DF12D28003DBAB2 /* Build configuration list for PBXNativeTarget "InvadersPlusTests" */;
+			buildConfigurationList = F6BE38D81DF12D28003DBAB2 /* Build configuration list for PBXNativeTarget "Aliens AttackTests" */;
 			buildPhases = (
 				F6BE38CB1DF12D28003DBAB2 /* Sources */,
 				F6BE38CC1DF12D28003DBAB2 /* Frameworks */,
@@ -269,9 +269,9 @@
 			dependencies = (
 				F6BE38D51DF12D28003DBAB2 /* PBXTargetDependency */,
 			);
-			name = InvadersPlusTests;
+			name = "Aliens AttackTests";
 			productName = "Invaders-PlusTests";
-			productReference = F6BE38CF1DF12D28003DBAB2 /* InvadersPlusTests.xctest */;
+			productReference = F6BE38CF1DF12D28003DBAB2 /* Aliens AttackTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -298,7 +298,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CDF079C51975428800FFAB46 /* Build configuration list for PBXProject "InvadersPlus" */;
+			buildConfigurationList = CDF079C51975428800FFAB46 /* Build configuration list for PBXProject "Aliens Attack" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -311,8 +311,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDF079C91975428800FFAB46 /* InvadersPlus */,
-				F6BE38CE1DF12D28003DBAB2 /* InvadersPlusTests */,
+				CDF079C91975428800FFAB46 /* Aliens Attack */,
+				F6BE38CE1DF12D28003DBAB2 /* Aliens AttackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,7 +392,7 @@
 /* Begin PBXTargetDependency section */
 		F6BE38D51DF12D28003DBAB2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CDF079C91975428800FFAB46 /* InvadersPlus */;
+			target = CDF079C91975428800FFAB46 /* Aliens Attack */;
 			targetProxy = F6BE38D41DF12D28003DBAB2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -539,7 +539,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InvadersPlus.app/InvadersPlus";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aliens Attack.app/Aliens Attack";
 			};
 			name = Debug;
 		};
@@ -560,14 +560,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dcmoreland.Invaders-PlusTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InvadersPlus.app/InvadersPlus";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aliens Attack.app/Aliens Attack";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CDF079C51975428800FFAB46 /* Build configuration list for PBXProject "InvadersPlus" */ = {
+		CDF079C51975428800FFAB46 /* Build configuration list for PBXProject "Aliens Attack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDF079E81975428800FFAB46 /* Debug */,
@@ -576,7 +576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDF079EA1975428800FFAB46 /* Build configuration list for PBXNativeTarget "InvadersPlus" */ = {
+		CDF079EA1975428800FFAB46 /* Build configuration list for PBXNativeTarget "Aliens Attack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDF079EB1975428800FFAB46 /* Debug */,
@@ -585,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6BE38D81DF12D28003DBAB2 /* Build configuration list for PBXNativeTarget "InvadersPlusTests" */ = {
+		F6BE38D81DF12D28003DBAB2 /* Build configuration list for PBXNativeTarget "Aliens AttackTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6BE38D61DF12D28003DBAB2 /* Debug */,
