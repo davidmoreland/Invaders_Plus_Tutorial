@@ -27,15 +27,14 @@ import SpriteKit
 import CoreMotion
 
 
-
 class GameScene: SKScene, SKPhysicsContactDelegate {
 
 var pause = false;
-    var settingsVC : SettingsViewController!
+    var settingsVC : SettingsVC!
     var settings = Settings()
     
     var defenderShipSpeed :CGFloat = 40.0
-    var tiltSensitivity = 0.2
+    var tiltSensitivity = 0.5
     
    // let GameOverScene.gameScene = self
     
@@ -46,7 +45,6 @@ var pause = false;
     
   // Physics Bit Masks
     let kSceneEdgeCategory: UInt32 = 0x1 << 3
-    
     
     // testing
     var missedCount: Int = 0
@@ -146,14 +144,11 @@ var pause = false;
     physicsBody!.categoryBitMask = kSceneEdgeCategory
     
     setupInvaders()
-    
     setupShip()
-    
     setupHud()
-    
    
     // black space color
-    self.backgroundColor = SKColor.black
+    self.backgroundColor = SKColor.clear
   }
   
     

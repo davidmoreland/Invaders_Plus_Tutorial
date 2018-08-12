@@ -13,7 +13,7 @@ class Settings: NSObject {
 
     var gameScene: GameScene!
     
-    let SettingsVC : SettingsViewController? = nil
+    let SettingsVC : SettingsVC? = nil
     
     var invaderShipSpeed : String = "1"
     

@@ -64,7 +64,7 @@ class GameOverScene: SKScene {
         self.addChild(tapLabel)
         
         // black space color
-        self.backgroundColor = SKColor.black
+        self.backgroundColor = SKColor.red
         
        
     }

@@ -22,19 +22,19 @@
 
 import UIKit
 import SpriteKit
+import MapKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, MKMapViewDelegate {
   
+    @IBOutlet var skView: SKView!
+    @IBOutlet var mapView_background: MKMapView!
+    
  var pause = false
- var SettingVC : SettingsViewController = SettingsViewController()
+// var SettingVC : SettingsVC = SettingsVC()
   var gameScene : GameScene!
-  
  
   @IBAction func SettingsButton(_ sender: UIButton) {
     self.performSegue(withIdentifier: "presentSettings", sender: self)
-    
-   
-    
   }
   
   // let scene = GameScene(size: skView.frame.size)
@@ -43,7 +43,7 @@ class GameViewController: UIViewController {
     super.viewDidLoad()
     
     // Configure the view.
-    let skView = self.view as! SKView
+   // let skView = self.view as! SKView
     skView.showsFPS = true
     skView.showsNodeCount = true
     
@@ -92,10 +92,10 @@ class GameViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     if segue.identifier == "presentSettings" {
-      self.SettingVC  = segue.destination as! SettingsViewController
-      SettingVC.pause = true
+    //  self.SettingVC  = segue.destination as! SettingsVC
+    //  SettingVC.pause = true
       gameScene.pause = true
-      SettingVC.gameScene = self.gameScene
+  //    SettingVC.gameScene = self.gameScene
     //  SettingVC.restoreSettings()
     
      // settingsVC.pauseGame(pause: true)
