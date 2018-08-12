@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LVB-YS-i5n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LVB-YS-i5n">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="75"/>
+            <point key="canvasLocation" x="-133" y="57"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="wBy-zz-lJq">
@@ -71,78 +69,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="368" affinity="minY"/>
+                            <userLayoutGuide location="364" affinity="minY"/>
                         </userGuides>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EO-2H-HvX" userLabel="Invader_FiringRateLabel">
-                                <rect key="frame" x="-52" y="-85" width="161" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="161" id="cU1-93-2Wm"/>
-                                </constraints>
+                                <rect key="frame" x="38.5" y="-85" width="70.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-dc-n0p" userLabel="Invader_NumShotsStepper">
-                                <rect key="frame" x="12" y="173" width="94" height="29"/>
-                                <connections>
-                                    <action selector="Invader_NumberOfShotsStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="K3X-ft-DWG"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Shot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="S5l-bw-Cqz" userLabel="InvaderLabel # of Shot">
-                                <rect key="frame" x="111" y="122" width="99.5" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1g-cD-xou" userLabel="DefenderLabel Firing Rate">
-                                <rect key="frame" x="113" y="210" width="94" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="szD-nx-Moj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-Wf-web" userLabel="Defender-Result Firing Rate Label">
-                                <rect key="frame" x="210" y="254" width="94" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" text="firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tl-9Y-g55" userLabel="Invader-Result Firing Rate Label">
-                                <rect key="frame" x="10" y="254" width="94" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="2b3-4J-rpK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-EZ-J6H" userLabel="Defender_NumShotsStepper">
-                                <rect key="frame" x="207" y="170" width="94" height="29"/>
-                                <connections>
-                                    <action selector="Defender_NumberOfShotsStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="0JQ-zI-VON"/>
-                                </connections>
-                            </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="8WA-D1-Oza" userLabel="InvaderFiringRateStepper">
-                                <rect key="frame" x="209" y="283" width="94" height="29"/>
-                                <connections>
-                                    <action selector="Defender_FiringRateStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="qOX-VE-t2V"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Missles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fc-Yv-mTu">
-                                <rect key="frame" x="98" y="87" width="125" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Missles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fc-Yv-mTu" userLabel="SectionLabel_Missles">
+                                <rect key="frame" x="98" y="67" width="125" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="r89-VI-1M9"/>
-                                    <constraint firstAttribute="width" constant="125" id="ryT-Rv-jeR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="ryT-Rv-jeR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ship" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c62-Un-rfE" userLabel="SectionLabel_Ship">
+                                <rect key="frame" x="139" y="261" width="42.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="574-bE-QAn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="pB7-85-Jt8">
-                                <rect key="frame" x="100.5" y="490" width="121" height="52"/>
+                                <rect key="frame" x="110" y="499" width="100" height="52"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Bhl-oB-NlJ"/>
@@ -155,182 +111,300 @@
                                     <action selector="exitSettings:" destination="waj-Rr-O8y" eventType="touchUpInside" id="CO9-rx-sb2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Invaders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZkA-Ud-Ck1" userLabel="SectionLabel_Invaders">
-                                <rect key="frame" x="14" y="27" width="71.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-ms-3d8" userLabel="Invader_FiringRateStepper">
-                                <rect key="frame" x="10" y="283" width="94" height="29"/>
-                                <connections>
-                                    <action selector="Invader_FiringRateStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="HWT-zB-cdP"/>
-                                </connections>
-                            </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-hy-Pgb" userLabel="Defender_FiringRateStepper">
-                                <rect key="frame" x="209" y="373" width="94" height="29"/>
-                                <connections>
-                                    <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="G3Y-2g-EfU"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="imv-rN-vcj" userLabel="Invader-Result Ship Speed Label">
-                                <rect key="frame" x="32" y="383" width="50" height="19"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Msl-WM-eXf" userLabel="Main-Heading">
+                                <rect key="frame" x="33" y="28" width="255" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Invaders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZkA-Ud-Ck1" userLabel="SectionLabel_Invaders">
+                                        <rect key="frame" x="0.0" y="3" width="74.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMY-t3-6IQ">
+                                        <rect key="frame" x="98.5" y="0.0" width="50" height="30"/>
+                                        <state key="normal" title="Default"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defenders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oj0-zM-As7">
+                                        <rect key="frame" x="164.5" y="3" width="90.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qBc-tx-6h6" userLabel="Ship">
+                                <rect key="frame" x="41.5" y="285" width="238" height="157"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="kWp-Zo-fCY" userLabel="Ship-Speed">
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="49.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hiG-eo-lLo" userLabel="Inv-ShipSpeed">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="imv-rN-vcj" userLabel="Invader-Result Ship Speed Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="19"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="19" id="VIk-AO-FpI"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="IxC-7p-0FO" userLabel="Invader_ShipSpeedStepper">
+                                                        <rect key="frame" x="0.0" y="19" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Invader_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="L07-H3-2O5"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="6QY-fd-gcM" userLabel="Def-ShipSpeed">
+                                                <rect key="frame" x="144" y="0.0" width="94" height="49.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFm-dJ-8e0" userLabel="Defender_Ship Speed Label">
+                                                        <rect key="frame" x="44.5" y="0.0" width="49.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-hy-Pgb" userLabel="Defender_FiringRateStepper">
+                                                        <rect key="frame" x="0.0" y="20.5" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="G3Y-2g-EfU"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-5G-4St" userLabel="Ship-Sensitivity">
+                                        <rect key="frame" x="0.0" y="49.5" width="238" height="49.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5qu-Nr-7gB" userLabel="Inv-Sensitivity">
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="49.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensitivity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88l-eb-ft9" userLabel="Defender_Ship Speed Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-dS-gBH" userLabel="Defender_FiringRateStepper">
+                                                        <rect key="frame" x="0.0" y="20.5" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="YVJ-SQ-X2G"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="MoF-0p-N6F" userLabel="Def-Sensitivity">
+                                                <rect key="frame" x="144" y="0.0" width="94" height="49.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensitivity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3l-gB-wU0" userLabel="Defender_Ship Speed Label">
+                                                        <rect key="frame" x="15.5" y="0.0" width="78.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="11J-g1-iOe" userLabel="Defender_FiringRateStepper">
+                                                        <rect key="frame" x="0.0" y="20.5" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="kyW-gW-RHv"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zM0-Oy-0qV" userLabel="Ship-Repair">
+                                        <rect key="frame" x="0.0" y="99" width="238" height="58"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-tM-V4Q" userLabel="Inv-Sensitivity">
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="58"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repair Rate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyr-Eq-KKL" userLabel="Defender_Ship Speed Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="uso-Bs-SDn" userLabel="Defender_FiringRateStepper">
+                                                        <rect key="frame" x="0.0" y="29" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="Z1g-ib-8Od"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r9S-YS-bub" userLabel="Def-Sensitivity">
+                                                <rect key="frame" x="144" y="0.0" width="94" height="58"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Repair Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KY3-CU-cW8" userLabel="Defender_Ship Speed Label">
+                                                        <rect key="frame" x="3" y="0.0" width="88" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dej-CL-H4Y" userLabel="Defender_FiringRateStepper">
+                                                        <rect key="frame" x="0.0" y="29" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="kGJ-ji-o9k"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p1a-vO-7VL" userLabel="Missles">
+                                <rect key="frame" x="41" y="89" width="238" height="155"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Q56-Vh-eBU" userLabel="NumberOfShots">
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="48.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="k7L-hc-drh" userLabel="Inv-NumShots">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="47"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aL-Rk-j64" userLabel="Defender-Result # shots">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-dc-n0p" userLabel="Invader_NumShotsStepper">
+                                                        <rect key="frame" x="0.0" y="18" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Invader_NumberOfShotsStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="K3X-ft-DWG"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Rnj-la-4RR" userLabel="Def-NumShots">
+                                                <rect key="frame" x="144" y="0.0" width="94" height="47"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgs-Ji-qEc" userLabel="Defender-Result # shots">
+                                                        <rect key="frame" x="43" y="0.0" width="51" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-EZ-J6H" userLabel="Defender_NumShotsStepper">
+                                                        <rect key="frame" x="0.0" y="18" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Defender_NumberOfShotsStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="0JQ-zI-VON"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="3Rq-fc-RzU" userLabel="FiringRate">
+                                        <rect key="frame" x="0.0" y="53.5" width="238" height="47"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9Qv-G5-ty4" userLabel="Inv-FiringRate">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="47"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" ambiguous="YES" text="Firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tl-9Y-g55" userLabel="Invader-Result Firing Rate Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-ms-3d8" userLabel="Invader_FiringRateStepper">
+                                                        <rect key="frame" x="0.0" y="18" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Invader_FiringRateStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="HWT-zB-cdP"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="6lh-e6-e6M" userLabel="Def-firingRate">
+                                                <rect key="frame" x="144" y="0.0" width="94" height="47"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Firing Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-Wf-web" userLabel="Defender-Result Firing Rate Label">
+                                                        <rect key="frame" x="20.5" y="0.0" width="73.5" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="8WA-D1-Oza" userLabel="InvaderFiringRateStepper">
+                                                        <rect key="frame" x="0.0" y="18" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Defender_FiringRateStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="qOX-VE-t2V"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="tCA-6d-1SP" userLabel="MissleSpeed">
+                                        <rect key="frame" x="0.0" y="105.5" width="238" height="49.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="iyy-qd-ylE" userLabel="InvMissle-Speed">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="49.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Z5k-RN-unz" userLabel="Invader-Result Ship Speed Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="xgg-Fn-T2X" userLabel="Invader_ShipSpeedStepper">
+                                                        <rect key="frame" x="0.0" y="20.5" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Invader_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="PhY-GQ-FqV"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Ots-4n-JZu" userLabel="DefMissle-Speed">
+                                                <rect key="frame" x="144" y="0.0" width="94" height="49.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICl-fp-6CU" userLabel="Defender_Ship Speed Label">
+                                                        <rect key="frame" x="44.5" y="0.0" width="49.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dem-8Y-qYE" userLabel="Defender_FiringRateStepper">
+                                                        <rect key="frame" x="0.0" y="20.5" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="RRG-fm-0mW"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Dem-8Y-qYE" firstAttribute="leading" secondItem="Ots-4n-JZu" secondAttribute="leading" id="P9f-Cy-q7g"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="19" id="VIk-AO-FpI"/>
+                                    <constraint firstItem="3Rq-fc-RzU" firstAttribute="centerY" secondItem="p1a-vO-7VL" secondAttribute="centerY" id="XtK-xG-IKu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="IxC-7p-0FO" userLabel="Invader_ShipSpeedStepper">
-                                <rect key="frame" x="10" y="410" width="94" height="29"/>
-                                <connections>
-                                    <action selector="Invader_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="L07-H3-2O5"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFm-dJ-8e0" userLabel="Defender_Ship Speed Label">
-                                <rect key="frame" x="229.5" y="345" width="63.5" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEK-t6-1GD" userLabel="DefenderLabel Firing Rate">
-                                <rect key="frame" x="111" y="334" width="94" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="j42-nE-ypl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgs-Ji-qEc" userLabel="Defender-Result # shots">
-                                <rect key="frame" x="235" y="148" width="51" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="V2Y-VH-BO2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aL-Rk-j64" userLabel="Defender-Result # shots">
-                                <rect key="frame" x="31" y="148" width="51" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="Twu-aB-yr2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ship" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c62-Un-rfE" userLabel="SectionLabel_Velocity">
-                                <rect key="frame" x="138" y="302" width="44" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="574-bE-QAn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="11J-g1-iOe" userLabel="Defender_FiringRateStepper">
-                                <rect key="frame" x="209" y="438" width="94" height="29"/>
-                                <connections>
-                                    <action selector="Defender_ShipSpeedStepper:" destination="waj-Rr-O8y" eventType="valueChanged" id="kyW-gW-RHv"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sensitivity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3l-gB-wU0" userLabel="Defender_Ship Speed Label">
-                                <rect key="frame" x="224" y="410" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Tcj-wM-JQL">
-                                <rect key="frame" x="101" y="20" width="110" height="52"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="vdz-Z5-FtR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Defaul Settings">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resetGame:" destination="waj-Rr-O8y" eventType="touchUpInside" id="fqS-Tj-KEj"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defenders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oj0-zM-As7">
-                                <rect key="frame" x="224" y="29" width="79" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="19" id="bdF-vV-Yb0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="l1g-cD-xou" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-103.5" id="2Hm-rl-HQg"/>
-                            <constraint firstItem="oj0-zM-As7" firstAttribute="leading" secondItem="TFm-dJ-8e0" secondAttribute="leading" constant="-5.5" id="3Qb-z4-4AD"/>
-                            <constraint firstItem="TFm-dJ-8e0" firstAttribute="baseline" secondItem="imv-rN-vcj" secondAttribute="firstBaseline" constant="-38.5" id="3Wg-2c-qXT"/>
-                            <constraint firstItem="Tcj-wM-JQL" firstAttribute="leading" secondItem="pB7-85-Jt8" secondAttribute="leading" id="3af-8B-m72"/>
-                            <constraint firstItem="TwN-EZ-J6H" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-9.5" id="4lX-ic-gTj"/>
-                            <constraint firstItem="Nem-hy-Pgb" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-7.5" id="5IX-0u-n9K"/>
-                            <constraint firstItem="9fc-Yv-mTu" firstAttribute="top" secondItem="pB7-85-Jt8" secondAttribute="bottom" constant="-455" id="9AY-o3-qho"/>
-                            <constraint firstItem="Gkx-ms-3d8" firstAttribute="leading" secondItem="IxC-7p-0FO" secondAttribute="leading" id="Bhi-0C-wOL"/>
-                            <constraint firstItem="imv-rN-vcj" firstAttribute="trailing" secondItem="3aL-Rk-j64" secondAttribute="trailing" id="D9J-hR-9N5"/>
-                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="top" secondItem="qQZ-dc-n0p" secondAttribute="bottom" constant="52" id="DIP-Tt-hBA"/>
-                            <constraint firstItem="IxC-7p-0FO" firstAttribute="top" secondItem="imv-rN-vcj" secondAttribute="bottom" constant="8" id="Dib-2Y-Rxh"/>
-                            <constraint firstItem="imv-rN-vcj" firstAttribute="centerX" secondItem="IxC-7p-0FO" secondAttribute="centerX" id="Dkm-Hi-QhY"/>
-                            <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="centerY" secondItem="oj0-zM-As7" secondAttribute="centerY" constant="-1" id="EY9-P4-LpF"/>
-                            <constraint firstItem="11J-g1-iOe" firstAttribute="top" secondItem="M3l-gB-wU0" secondAttribute="bottom" constant="7" id="EcX-DN-IL0"/>
-                            <constraint firstItem="TFm-dJ-8e0" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-2.25" id="Emk-pJ-KfD"/>
-                            <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="top" secondItem="pB7-85-Jt8" secondAttribute="top" constant="-463" id="Emp-Mq-tqj"/>
-                            <constraint firstItem="oj0-zM-As7" firstAttribute="leading" secondItem="pB7-85-Jt8" secondAttribute="trailing" constant="2.5" id="Fn7-ao-Huv"/>
-                            <constraint firstItem="qQZ-dc-n0p" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-4" id="HGD-x0-aie"/>
-                            <constraint firstItem="TFm-dJ-8e0" firstAttribute="centerX" secondItem="Nem-hy-Pgb" secondAttribute="centerX" constant="5.25" id="Hft-hC-UQy"/>
-                            <constraint firstItem="Nem-hy-Pgb" firstAttribute="top" secondItem="TFm-dJ-8e0" secondAttribute="bottom" constant="8" id="I8U-H4-8dI"/>
-                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="leading" secondItem="Gkx-ms-3d8" secondAttribute="leading" id="KAg-0V-M5C"/>
-                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="trailing" secondItem="Gkx-ms-3d8" secondAttribute="trailing" id="Kd2-tV-24k"/>
-                            <constraint firstItem="l1g-cD-xou" firstAttribute="leading" secondItem="8WA-D1-Oza" secondAttribute="leading" constant="-96" id="LtJ-S9-Dqf"/>
-                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="baseline" secondItem="Hf3-Wf-web" secondAttribute="baseline" id="Mqp-YR-mkQ"/>
-                            <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="centerX" secondItem="S5l-bw-Cqz" secondAttribute="centerX" constant="-111.25" id="NNc-xk-39b"/>
-                            <constraint firstItem="S5l-bw-Cqz" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="95" id="NNt-Bo-mHw"/>
-                            <constraint firstItem="qQZ-dc-n0p" firstAttribute="top" secondItem="3aL-Rk-j64" secondAttribute="bottom" constant="7" id="T1v-a8-Ilx"/>
-                            <constraint firstItem="l1g-cD-xou" firstAttribute="trailing" secondItem="ZDN-IK-mnc" secondAttribute="trailingMargin" constant="-97" id="TYs-8a-OAX"/>
-                            <constraint firstItem="oj0-zM-As7" firstAttribute="top" secondItem="uDV-Jw-iCk" secondAttribute="bottom" constant="9" id="U4R-F7-zWz"/>
-                            <constraint firstItem="Tcj-wM-JQL" firstAttribute="trailing" secondItem="pB7-85-Jt8" secondAttribute="trailing" constant="-10.5" id="UEr-ZU-onB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oj0-zM-As7" secondAttribute="trailing" constant="1" id="UQf-MT-Uqr"/>
-                            <constraint firstItem="ZkA-Ud-Ck1" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-2" id="VBN-X5-hVt"/>
-                            <constraint firstItem="pB7-85-Jt8" firstAttribute="centerX" secondItem="9fc-Yv-mTu" secondAttribute="centerX" id="VHc-Ou-x0j"/>
-                            <constraint firstItem="c62-Un-rfE" firstAttribute="top" secondItem="l1g-cD-xou" secondAttribute="bottom" constant="60" id="WJh-Pe-Bud"/>
-                            <constraint firstItem="cIy-ek-Y5J" firstAttribute="top" secondItem="c62-Un-rfE" secondAttribute="bottom" constant="242" id="Wnw-E5-Rns"/>
-                            <constraint firstItem="TwN-EZ-J6H" firstAttribute="leading" secondItem="Hf3-Wf-web" secondAttribute="leading" constant="-3" id="XSw-cJ-d6u"/>
-                            <constraint firstItem="M3l-gB-wU0" firstAttribute="top" secondItem="IxC-7p-0FO" secondAttribute="top" id="YXh-45-MDe"/>
-                            <constraint firstItem="qQZ-dc-n0p" firstAttribute="top" secondItem="TwN-EZ-J6H" secondAttribute="top" constant="3" id="ZMG-On-FCq"/>
+                            <constraint firstItem="Msl-WM-eXf" firstAttribute="centerX" secondItem="ZDN-IK-mnc" secondAttribute="centerX" id="6J3-Ut-3VI"/>
+                            <constraint firstItem="9fc-Yv-mTu" firstAttribute="top" secondItem="Msl-WM-eXf" secondAttribute="bottom" constant="9" id="8pG-jb-CGG"/>
+                            <constraint firstItem="pB7-85-Jt8" firstAttribute="centerX" secondItem="ZDN-IK-mnc" secondAttribute="centerX" id="9LA-cy-Vfv"/>
+                            <constraint firstItem="9fc-Yv-mTu" firstAttribute="centerX" secondItem="ZDN-IK-mnc" secondAttribute="centerX" id="AIF-fg-Gg9"/>
+                            <constraint firstItem="pB7-85-Jt8" firstAttribute="top" secondItem="qBc-tx-6h6" secondAttribute="bottom" constant="57" id="NJA-9y-zJy"/>
+                            <constraint firstItem="Msl-WM-eXf" firstAttribute="centerX" secondItem="ZDN-IK-mnc" secondAttribute="centerX" id="NRH-YB-pV4"/>
+                            <constraint firstItem="c62-Un-rfE" firstAttribute="centerX" secondItem="ZDN-IK-mnc" secondAttribute="centerX" id="Wys-b6-tgq"/>
+                            <constraint firstItem="c62-Un-rfE" firstAttribute="top" secondItem="ZDN-IK-mnc" secondAttribute="top" constant="261" id="Z3H-vp-0GC"/>
                             <constraint firstItem="9fc-Yv-mTu" firstAttribute="centerX" secondItem="ZDN-IK-mnc" secondAttribute="centerX" id="ZlC-NT-kw0"/>
-                            <constraint firstItem="8WA-D1-Oza" firstAttribute="leading" secondItem="Nem-hy-Pgb" secondAttribute="leading" id="a0b-57-6y6"/>
                             <constraint firstItem="uDV-Jw-iCk" firstAttribute="top" secondItem="1EO-2H-HvX" secondAttribute="bottom" constant="87" id="asr-ca-hhF"/>
-                            <constraint firstItem="1EO-2H-HvX" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-68" id="bxs-xQ-lGE"/>
-                            <constraint firstItem="TwN-EZ-J6H" firstAttribute="trailing" secondItem="Hf3-Wf-web" secondAttribute="trailing" constant="-3" id="dP9-pP-i3e"/>
-                            <constraint firstItem="TwN-EZ-J6H" firstAttribute="top" secondItem="Cgs-Ji-qEc" secondAttribute="bottom" constant="4" id="dbv-sw-6qv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cgs-Ji-qEc" secondAttribute="trailing" constant="18" id="doJ-SP-UFt"/>
-                            <constraint firstItem="Gkx-ms-3d8" firstAttribute="top" secondItem="8WA-D1-Oza" secondAttribute="top" id="f7P-Y4-KmR"/>
-                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="firstBaseline" secondItem="Hf3-Wf-web" secondAttribute="firstBaseline" id="fee-pm-deq"/>
-                            <constraint firstItem="S5l-bw-Cqz" firstAttribute="top" secondItem="ZkA-Ud-Ck1" secondAttribute="bottom" constant="74" id="fev-QP-37R"/>
-                            <constraint firstItem="l1g-cD-xou" firstAttribute="trailing" secondItem="8WA-D1-Oza" secondAttribute="trailing" constant="-96" id="gWh-aM-qyS"/>
-                            <constraint firstItem="imv-rN-vcj" firstAttribute="baseline" secondItem="TFm-dJ-8e0" secondAttribute="firstBaseline" constant="36.5" id="gxh-bj-Pzl"/>
-                            <constraint firstItem="SEK-t6-1GD" firstAttribute="leading" secondItem="ZkA-Ud-Ck1" secondAttribute="leading" constant="97" id="hcx-37-EKA"/>
+                            <constraint firstItem="1EO-2H-HvX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" id="bxs-xQ-lGE"/>
+                            <constraint firstItem="qBc-tx-6h6" firstAttribute="top" secondItem="c62-Un-rfE" secondAttribute="bottom" id="ghq-ut-Klx"/>
                             <constraint firstItem="9fc-Yv-mTu" firstAttribute="centerX" secondItem="c62-Un-rfE" secondAttribute="centerX" constant="0.5" id="ius-S7-1ZA"/>
-                            <constraint firstItem="pB7-85-Jt8" firstAttribute="leading" secondItem="ZkA-Ud-Ck1" secondAttribute="trailing" constant="15" id="k31-e4-CxN"/>
-                            <constraint firstItem="Gkx-ms-3d8" firstAttribute="top" secondItem="3Tl-9Y-g55" secondAttribute="bottom" constant="9" id="laD-N5-V1L"/>
-                            <constraint firstItem="M3l-gB-wU0" firstAttribute="centerX" secondItem="11J-g1-iOe" secondAttribute="centerX" constant="6.5" id="lnG-s1-zdp"/>
-                            <constraint firstItem="cIy-ek-Y5J" firstAttribute="top" secondItem="IxC-7p-0FO" secondAttribute="bottom" constant="129" id="ogI-lt-05v"/>
-                            <constraint firstItem="3Tl-9Y-g55" firstAttribute="leading" secondItem="ZDN-IK-mnc" secondAttribute="leadingMargin" constant="-6" id="s6w-Nj-rwS"/>
-                            <constraint firstItem="SEK-t6-1GD" firstAttribute="top" secondItem="Gkx-ms-3d8" secondAttribute="bottom" constant="22.5" id="t4V-HZ-TG6"/>
-                            <constraint firstItem="imv-rN-vcj" firstAttribute="top" secondItem="SEK-t6-1GD" secondAttribute="bottom" constant="28" id="vT8-io-AGg"/>
-                            <constraint firstItem="cIy-ek-Y5J" firstAttribute="top" secondItem="Tcj-wM-JQL" secondAttribute="bottom" constant="496" id="wxi-eu-HC0"/>
-                            <constraint firstItem="11J-g1-iOe" firstAttribute="leading" secondItem="Nem-hy-Pgb" secondAttribute="leading" id="xKB-4H-4oK"/>
-                            <constraint firstItem="l1g-cD-xou" firstAttribute="top" secondItem="S5l-bw-Cqz" secondAttribute="bottom" constant="68" id="xyL-HL-F19"/>
-                            <constraint firstItem="8WA-D1-Oza" firstAttribute="centerX" secondItem="oj0-zM-As7" secondAttribute="centerX" constant="-7.5" id="z7l-s5-lYk"/>
+                            <constraint firstItem="pB7-85-Jt8" firstAttribute="centerX" secondItem="qBc-tx-6h6" secondAttribute="centerX" id="rLk-xa-SZ7"/>
+                            <constraint firstItem="9fc-Yv-mTu" firstAttribute="top" secondItem="ZDN-IK-mnc" secondAttribute="top" constant="67" id="szA-Fb-Vcb"/>
+                            <constraint firstAttribute="trailing" secondItem="1EO-2H-HvX" secondAttribute="trailingMargin" constant="219" id="t06-ZW-aSj"/>
+                            <constraint firstItem="c62-Un-rfE" firstAttribute="top" secondItem="p1a-vO-7VL" secondAttribute="bottom" constant="17" id="uFN-xb-EyK"/>
                         </constraints>
                     </view>
                     <connections>
@@ -350,7 +424,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4e-Ap-Yhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808" y="75"/>
+            <point key="canvasLocation" x="806.25" y="75"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>

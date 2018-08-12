@@ -18,7 +18,7 @@ class Hud {
     
     func makeHud() -> SKNode {
         
-        let hud = SKSpriteNode(color: UIColor.lightGray, size: CGSize(width: 200, height: 15.0))
+        let hud = SKSpriteNode(color: UIColor.lightGray, size: CGSize(width: 200.0, height: 25.0))
         hud.name = kHudName
         
         // Physics
@@ -33,7 +33,7 @@ class Hud {
         hud.physicsBody!.affectedByGravity = false
         
         //4: Give the ship an arbitrary mass so that its movement feels natural.
-        hud.physicsBody!.mass = 0.02
+        hud.physicsBody!.mass = 0.0
         
         //collision Detection
         // 1:  Sets Ship Category
@@ -43,7 +43,7 @@ class Hud {
         hud.physicsBody!.contactTestBitMask = 0x0
         
         //3:  Do detect collisions between the ship and the scene's outer edges
-        hud.physicsBody!.collisionBitMask = GameScene().kSceneEdgeCategory
+        hud.physicsBody!.collisionBitMask =  // GameScene().kSceneEdgeCategory
         
         
         return hud

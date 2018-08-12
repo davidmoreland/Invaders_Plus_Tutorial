@@ -34,7 +34,7 @@ var pause = false;
     var settingsVC : SettingsViewController!
     var settings = Settings()
     
-    var defenderShipSpeed :CGFloat = 40
+    var defenderShipSpeed :CGFloat = 40.0
     var tiltSensitivity = 0.2
     
    // let GameOverScene.gameScene = self
@@ -118,7 +118,7 @@ var pause = false;
     let kScoreHudName = "scoreHud"
     let kHealthHudName = "healthHud"
     let kDefenderMissedShotHudName = "missedShotHud"
-    var score: Int = 0
+    var score: Int = 0 {didSet(newValue) {print("Score: \(newValue)") } }
     var shipHealth: Float = 1.0
     var missedShotScore: Int = 0
     
