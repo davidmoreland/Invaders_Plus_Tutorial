@@ -43,11 +43,9 @@ class Hud {
         hud.physicsBody!.contactTestBitMask = 0x0
         
         //3:  Do detect collisions between the ship and the scene's outer edges
-        hud.physicsBody!.collisionBitMask =  // GameScene().kSceneEdgeCategory
-        
+   //     hud.physicsBody!.collisionBitMask =  GameScene().kSceneEdgeCategory
         
         return hud
-
     }
 
 }
