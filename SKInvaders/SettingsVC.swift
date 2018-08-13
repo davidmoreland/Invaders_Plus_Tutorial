@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import SceneKit
+import MapKit
+import CoreLocation
 
 class SettingsVC: UIViewController {
     
@@ -49,6 +51,8 @@ class SettingsVC: UIViewController {
         var shipDamage: Float = 0.0
         var shipRepairTime: Float = 1.0
     }
+    
+    
     
     struct GameSettings {
         

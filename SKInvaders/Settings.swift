@@ -8,6 +8,7 @@
 
 import UIKit
 import SceneKit
+import MapKit
 
 class Settings: NSObject {
 
@@ -35,8 +36,44 @@ class Settings: NSObject {
         }
     }
     
-    
-       
+    struct MapSettings {
+        var latitude: CLLocationDegrees?
+        var longitude: CLLocationDegrees?
+        var latDelta: CLLocationDegrees?
+        var lonDelta: CLLocationDegrees?
+        var location: CLLocationCoordinate2D?
+        var span: MKCoordinateSpan?
+        var region: MKCoordinateRegion?
+        
+        init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, latDelta: CLLocationDegrees, lonDelta: CLLocationDegrees) {
+            self.latitude = latitude
+            self.longitude = longitude
+            self.latDelta = latDelta
+            self.lonDelta = lonDelta
+            self.location = CLLocationCoordinate2D(latitude: 37.60, longitude: 125.22)
+            self.span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+            
+            if (location != nil && span != nil) {
+            self.region =  MKCoordinateRegion(center: location!, span: span!)
+            }
+            else if (location == nil) {
+                print ("Map Struct: Location Error!!")
+            } else if (span == nil) {
+                print ("Map Struct: Span Error!!")
+            }
+        }
+        
+        init() {
+            var latitude: CLLocationDegrees = -137.5252
+            var longitude: CLLocationDegrees = 65.0000
+            var latDelta: CLLocationDegrees = 10.00
+            var lonDelta: CLLocationDegrees = 10.00
+            var location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            var span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+            var region: MKCoordinateRegion?
+        }
+        
+    }
     
     
     // Default

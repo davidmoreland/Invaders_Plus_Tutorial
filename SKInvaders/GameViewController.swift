@@ -42,8 +42,24 @@ class GameViewController: UIViewController, MKMapViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    // Set Background Map
+    
     // Configure the view.
    // let skView = self.view as! SKView
+    
+    // load Background Map
+  //  self.mapView_background.setRegion(loadBackgroundMapUsing(map: Settings.MapSettings()), animated: true)
+    let latitude: CLLocationDegrees = 32.5899981
+    let longitude: CLLocationDegrees = -96.7954577
+    let latDelta: CLLocationDegrees = 0.05
+    let lonDelta: CLLocationDegrees = 0.05
+    let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+    let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
+    
+    mapView_background.setRegion(region, animated: true)
+    mapView_background.mapType = MKMapType.satelliteFlyover
+    
     skView.showsFPS = true
     skView.showsNodeCount = true
     
@@ -60,6 +76,14 @@ class GameViewController: UIViewController, MKMapViewDelegate {
     NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.handleApplicationWillResignActive(_:)), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
     
     NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.handleApplicationDidBecomeActive(_:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+  }
+  
+  func loadBackgroundMapUsing(map: Settings.MapSettings) -> MKCoordinateRegion {
+    print("Latitude: \(map.latitude)")
+    print("Longitude: \(map.longitude)")
+    print("Region: \(map.region)")
+    
+    return map.region!
   }
   
   override var prefersStatusBarHidden: Bool {
