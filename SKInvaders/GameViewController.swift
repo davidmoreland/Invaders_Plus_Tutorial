@@ -39,7 +39,7 @@ class GameViewController: UIViewController, MKMapViewDelegate {
   // Ship 'Slip' Left / Right sensitivity
  //   @IBAction func increase_Ship_Sensitvity(_ sender: UIButton) { Settings.Game.Device().tiltSensitivity += 0.020
   //  }
-  
+
     @IBAction func decrease_Ship_Sensitivity(_ sender: UIButton) {
     }
     // let scene = GameScene(size: skView.frame.size)
