@@ -18,7 +18,7 @@ class Hud {
     
     func makeHud() -> SKNode {
         
-        let hud = SKSpriteNode(color: UIColor.lightGray, size: CGSize(width: 200.0, height: 25.0))
+        let hud = SKSpriteNode(color: UIColor.lightGray.withAlphaComponent(0.2), size: CGSize(width: 200.0, height: 25.0))
         hud.name = kHudName
         
         // Physics
@@ -26,7 +26,7 @@ class Hud {
         hud.physicsBody = SKPhysicsBody(rectangleOf: hud.frame.size)
         
         //2: Make the shape dynamic; this makes it subject to things such as collisions and other outside forces.
-        hud.physicsBody!.isDynamic = true
+        hud.physicsBody!.isDynamic = false
         
         /*   3:  You don't want the ship to drop off the bottom of the screen, so you indicate that it's not affected by gravity.
          */

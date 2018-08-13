@@ -51,14 +51,16 @@ class GameViewController: UIViewController, MKMapViewDelegate {
   //  self.mapView_background.setRegion(loadBackgroundMapUsing(map: Settings.MapSettings()), animated: true)
     let latitude: CLLocationDegrees = 32.5899981
     let longitude: CLLocationDegrees = -96.7954577
-    let latDelta: CLLocationDegrees = 50.50
-    let lonDelta: CLLocationDegrees = 50.50
+    let latDelta: CLLocationDegrees = Settings.Altitude.ground.rawValue // 20.00
+    let lonDelta: CLLocationDegrees = Settings.Altitude.ground.rawValue 
     let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
     let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
     
-    mapView_background.setRegion(region, animated: true)
-    mapView_background.mapType = MKMapType.satelliteFlyover
+  //  mapView_background.setRegion(region, animated: true)
+  //  mapView_background.mapType = MKMapType.satelliteFlyover
+  //  mapView_background.mapType = MKMapType.satellite
+    mapView_background.mapType = MKMapType.init(rawValue: 2)!
     
     skView.showsFPS = true
     skView.showsNodeCount = true

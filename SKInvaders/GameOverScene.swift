@@ -78,13 +78,13 @@ class GameOverScene: SKScene {
 
     func resetGameScene() {
         gameScene.pause = true
-       Settings().loadGameSettings()
+  //     Settings().loadGameSettings()
     
         
     
     }
     
-    func displayStatsBy(player: stats)
+   // func displayStatsBy(player: stats)
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         

@@ -12,7 +12,50 @@ import MapKit
 
 class Settings: NSObject {
 
+    struct MapSettings {
+        var latitude: CLLocationDegrees?
+        var longitude: CLLocationDegrees?
+        var latDelta: CLLocationDegrees?
+        var lonDelta: CLLocationDegrees?
+        var location: CLLocationCoordinate2D?
+        var span: MKCoordinateSpan?
+        var region: MKCoordinateRegion?
+        
+        init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, latDelta: CLLocationDegrees, lonDelta: CLLocationDegrees) {
+            self.latitude = latitude
+            self.longitude = longitude
+            self.latDelta = latDelta
+            self.lonDelta = lonDelta
+            self.location = CLLocationCoordinate2D(latitude: 37.60, longitude: 125.22)
+            self.span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+            
+            if (location != nil && span != nil) {
+                self.region =  MKCoordinateRegion(center: location!, span: span!)
+            }
+            else if (location == nil) {
+                print ("Map Struct: Location Error!!")
+            } else if (span == nil) {
+                print ("Map Struct: Span Error!!")
+            }
+        }
+        
+        init() {
+            var latitude: CLLocationDegrees = -137.5252
+            var longitude: CLLocationDegrees = 65.0000
+            var latDelta: CLLocationDegrees = 10.00
+            var lonDelta: CLLocationDegrees = 10.00
+            var location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            var span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+            var region: MKCoordinateRegion?
+        }
+        
+        init(lat: CLLocationDegrees, lon: CLLocationDegrees) {
+            self.latitude = lat
+            self.longitude = lon
+        }
+    }
     
+
     struct InvaderSettings {
         var numberOfMissles: Int {  willSet { print("Invader-NumberOfMissles NewValue: \(newValue)") } }
         var missleSpeed: Float   {  willSet { print("Invader-MissleSpeed NewValue: \(newValue)") } }
@@ -29,7 +72,7 @@ class Settings: NSObject {
             self.shipDamage = shipDamage
             self.shipRepairTime = shipRepairTime
         }
-        
+    }
         struct DefenderSettings {
             var numberOfMissles: Int = 5
             var missleSpeed: Float = 5.0
@@ -48,15 +91,25 @@ class Settings: NSObject {
             var lastGameTime: TimeInterval = 0
             var numDistroyed: Int = 0
             var numMissedShots: Int = 0
-            var favoriteLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.7648, longitude: -73.9808)  // New York City
-            var numOfGamesPlayed: Int = 0
-            var bestGameTime: TimeInterval = 0
-            var highScore: Int = 0
+            var favoriteLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.7648, longitude: -73.9808)  // New York Citlet           var numOfGamesPlayed: Int = 0
+            let bestGameTime: TimeInterval = 0
+            var highletre: Int = 0
             var totalNumMissedShots: Int = 0
             var totalNumEnemyDistroyed: Int = 0
             
            
         }
+    
+    enum Altitude: CLLocationDegrees {
+        typealias RawValue = CLLocationDegrees
+        
+        case outterSpace = 1.00
+        case upperAtmoshere = 0.75
+        case jetway = 0.50
+        case privateAircraft = 0.30
+        case low = 0.10
+        case treeTop = 0.01
+        case ground  = 0.000
     }
     
     var gameScene: GameScene!
@@ -81,45 +134,6 @@ class Settings: NSObject {
             
         
         }
-    }
-    
-    struct MapSettings {
-        var latitude: CLLocationDegrees?
-        var longitude: CLLocationDegrees?
-        var latDelta: CLLocationDegrees?
-        var lonDelta: CLLocationDegrees?
-        var location: CLLocationCoordinate2D?
-        var span: MKCoordinateSpan?
-        var region: MKCoordinateRegion?
-        
-        init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, latDelta: CLLocationDegrees, lonDelta: CLLocationDegrees) {
-            self.latitude = latitude
-            self.longitude = longitude
-            self.latDelta = latDelta
-            self.lonDelta = lonDelta
-            self.location = CLLocationCoordinate2D(latitude: 37.60, longitude: 125.22)
-            self.span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
-            
-            if (location != nil && span != nil) {
-            self.region =  MKCoordinateRegion(center: location!, span: span!)
-            }
-            else if (location == nil) {
-                print ("Map Struct: Location Error!!")
-            } else if (span == nil) {
-                print ("Map Struct: Span Error!!")
-            }
-        }
-        
-        init() {
-            var latitude: CLLocationDegrees = -137.5252
-            var longitude: CLLocationDegrees = 65.0000
-            var latDelta: CLLocationDegrees = 10.00
-            var lonDelta: CLLocationDegrees = 10.00
-            var location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            var span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
-            var region: MKCoordinateRegion?
-        }
-        
     }
     
     
@@ -160,7 +174,7 @@ class Settings: NSObject {
                       
         }
     }
-    
+  /*
     func saveGameSettings() {
         UserDefaults.standard.setValue(self.invaderShipSpeed, forKey: "InvaderShipSpeed")
         UserDefaults.standard.setValue(self.invaderNumberOfShots, forKey: "InvaderNumberOfShots")
@@ -185,8 +199,9 @@ class Settings: NSObject {
             
         }
         
-            
-        }
+    */
+
+}
     
 
 

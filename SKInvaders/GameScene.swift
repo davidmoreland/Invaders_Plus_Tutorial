@@ -301,11 +301,9 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
         let scoreLabel = SKLabelNode(fontNamed: "Courier")
         scoreLabel.name = kScoreHudName
         scoreLabel.fontSize = 20
-        
         //2:  Color the score label green.
         scoreLabel.fontColor = SKColor.green
         scoreLabel.text = String(format: "Score: %04u", 0)
-        
         //3:  Position the score label.
         scoreLabel.position = CGPoint(x: frame.size.width / 2,
                                       y: frame.height - ( 40 + scoreLabel.frame.size.height / 2))
@@ -338,10 +336,8 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
         let missLabel = SKLabelNode(fontNamed: "Courier")
         missLabel.name = kDefenderMissedShotHudName
         missLabel.fontSize = 20
-        
         missLabel.fontColor = SKColor.red
         missLabel.text = String(format: "# Missed: %.02u", missedShotScore)
-        
         missLabel.position = CGPoint( x: frame.size.width / 2,
                                         y: size.height - (100 + missLabel.frame.size.height / 2))
 
