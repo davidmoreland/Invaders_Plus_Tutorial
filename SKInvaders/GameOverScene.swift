@@ -62,6 +62,12 @@ class GameOverScene: SKScene {
         tapLabel.position = CGPoint(x: self.size.width/2, y: gameOverLabel.frame.origin.y - gameOverLabel.frame.size.height - 40);
         
         self.addChild(tapLabel)
+        //Display Stats:
+        // # enemy distroyed
+        // # enemy left in current wave
+        // # your health
+        // # time
+        // beat your top score (yes/no) by X
         
         // black space color
         self.backgroundColor = SKColor.red
@@ -78,7 +84,7 @@ class GameOverScene: SKScene {
     
     }
     
-    
+    func displayStatsBy(player: stats)
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         

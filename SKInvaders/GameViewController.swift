@@ -51,8 +51,8 @@ class GameViewController: UIViewController, MKMapViewDelegate {
   //  self.mapView_background.setRegion(loadBackgroundMapUsing(map: Settings.MapSettings()), animated: true)
     let latitude: CLLocationDegrees = 32.5899981
     let longitude: CLLocationDegrees = -96.7954577
-    let latDelta: CLLocationDegrees = 0.05
-    let lonDelta: CLLocationDegrees = 0.05
+    let latDelta: CLLocationDegrees = 50.50
+    let lonDelta: CLLocationDegrees = 50.50
     let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
     let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)

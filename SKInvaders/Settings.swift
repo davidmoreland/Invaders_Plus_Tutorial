@@ -12,6 +12,53 @@ import MapKit
 
 class Settings: NSObject {
 
+    
+    struct InvaderSettings {
+        var numberOfMissles: Int {  willSet { print("Invader-NumberOfMissles NewValue: \(newValue)") } }
+        var missleSpeed: Float   {  willSet { print("Invader-MissleSpeed NewValue: \(newValue)") } }
+        var firingRate: Float     {  willSet { print("Invader-FiringRate NewValue: \(newValue)") } }
+        var shipSpeed: Float     {  willSet { print("NumberOfMissles NewValue: \(newValue)") } }
+        var shipDamage: Float    {  willSet { print("NumberOfMissles NewValue: \(newValue)") } }
+        var shipRepairTime: Float   {  willSet { print("NumberOfMissles NewValue: \(newValue)") } }
+        
+        init(numMissles: Int, missleSpeed: Float, firingRate: Float, shipSpeed: Float, shipDamage: Float, shipRepairTime: Float) {
+            self.numberOfMissles = numMissles
+            self.missleSpeed = missleSpeed
+            self.firingRate = firingRate
+            self.shipSpeed = shipSpeed
+            self.shipDamage = shipDamage
+            self.shipRepairTime = shipRepairTime
+        }
+        
+        struct DefenderSettings {
+            var numberOfMissles: Int = 5
+            var missleSpeed: Float = 5.0
+            var firingRate: Float =  5.0
+            var shipSpeed: Float = 2.0
+            var shipDamage: Float = 0.0
+            var shipRepairTime: Float = 1.0
+        }
+        
+        struct GameSettings {
+            
+        }
+        
+        struct PlayerStats {
+            var name: String!
+            var lastGameTime: TimeInterval = 0
+            var numDistroyed: Int = 0
+            var numMissedShots: Int = 0
+            var favoriteLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.7648, longitude: -73.9808)  // New York City
+            var numOfGamesPlayed: Int = 0
+            var bestGameTime: TimeInterval = 0
+            var highScore: Int = 0
+            var totalNumMissedShots: Int = 0
+            var totalNumEnemyDistroyed: Int = 0
+            
+           
+        }
+    }
+    
     var gameScene: GameScene!
     
     let SettingsVC : SettingsVC? = nil

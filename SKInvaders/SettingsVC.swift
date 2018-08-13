@@ -14,49 +14,11 @@ import CoreLocation
 
 class SettingsVC: UIViewController {
     
-    struct InvaderSettings {
-        var numberOfMissles: Int {  willSet { print("Invader-NumberOfMissles NewValue: \(newValue)") } }
-        var missleSpeed: Float   {  willSet { print("Invader-MissleSpeed NewValue: \(newValue)") } }
-        var firingRate: Float     {  willSet { print("Invader-FiringRate NewValue: \(newValue)") } }
-        var shipSpeed: Float     {  willSet { print("NumberOfMissles NewValue: \(newValue)") } }
-        var shipDamage: Float    {  willSet { print("NumberOfMissles NewValue: \(newValue)") } }
-        var shipRepairTime: Float   {  willSet { print("NumberOfMissles NewValue: \(newValue)") } }
-        
-        init(numMissles: Int, missleSpeed: Float, firingRate: Float, shipSpeed: Float, shipDamage: Float, shipRepairTime: Float) {
-            self.numberOfMissles = numMissles
-            self.missleSpeed = missleSpeed
-            self.firingRate = firingRate
-            self.shipSpeed = shipSpeed
-            self.shipDamage = shipDamage
-            self.shipRepairTime = shipRepairTime
-        }
-        
-        init() {
-            //Default Values
-            self.numberOfMissles = 3
-            self.missleSpeed = 5.0
-            self.firingRate = 5.0
-            self.shipSpeed = 5.0
-            self.shipDamage = 0.0
-            self.shipRepairTime = 0.0
-        }
-        
-    }
-    
-    struct DefenderSettings {
-        var numberOfMissles: Int = 5
-        var missleSpeed: Float = 5.0
-        var firingRate: Float =  5.0
-        var shipSpeed: Float = 2.0
-        var shipDamage: Float = 0.0
-        var shipRepairTime: Float = 1.0
-    }
     
     
+   
     
-    struct GameSettings {
-        
-    }
+    
     
     
     var pause : Bool = true

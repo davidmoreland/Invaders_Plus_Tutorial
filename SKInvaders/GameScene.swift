@@ -201,10 +201,8 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
 */
     // 1
     if (currentTime - timeOfLastMove < timePerMove) {
-        
-        
-        
-        return
+    
+    return
     }
     
 
@@ -639,6 +637,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             
             // 1A: 
             adjustShipHealth(by: -0.334)
+            //To Do: decrease altitude...  Setting.map
             
             if shipHealth <= 0.0 {
                 contact.bodyA.node!.removeFromParent()
@@ -664,7 +663,6 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             nodeNames.contains(Invader.InvaderType.name) && nodeNames.contains(Bullet().kShipFiredBulletName) {
             // 4:  
             run(SKAction.playSoundFileNamed("InvaderHit.wav", waitForCompletion: false))
-               
                 
             contact.bodyA.node!.removeFromParent()
             contact.bodyB.node!.removeFromParent()
@@ -673,8 +671,6 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             adjustScore(by: 100)
             }  // End Defender Bullet --> Invader
         
-            
-            
             else if nodeNames.contains(Bullet().kShipFiredBulletName ) && nodeNames.contains(Bullet().kInvaderFiredBulletName) {
                 run(SKAction.playSoundFileNamed("InvaderHit.wav", waitForCompletion: false))
              run(SKAction.playSoundFileNamed("ShipHit.wav", waitForCompletion: false))
@@ -696,10 +692,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             
             adjustScore(by: -50)
         }
-
-        
- 
-        }
+}
     
     
     
@@ -739,6 +732,13 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             
             //2: 
             motionManager.stopAccelerometerUpdates()
+            
+            //ToDo:  save data
+            // 1. Score
+            //     1a. #Misses
+            //     1b. #Hits
+            // 2. Time
+            // 3. Altitude
             
             //3: 
             let gameOverScene: GameOverScene = GameOverScene(size: size)
