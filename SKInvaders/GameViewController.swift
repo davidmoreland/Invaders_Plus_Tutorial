@@ -36,8 +36,13 @@ class GameViewController: UIViewController, MKMapViewDelegate {
   @IBAction func SettingsButton(_ sender: UIButton) {
     self.performSegue(withIdentifier: "presentSettings", sender: self)
   }
+  // Ship 'Slip' Left / Right sensitivity
+ //   @IBAction func increase_Ship_Sensitvity(_ sender: UIButton) { Settings.Game.Device().tiltSensitivity += 0.020
+  //  }
   
-  // let scene = GameScene(size: skView.frame.size)
+    @IBAction func decrease_Ship_Sensitivity(_ sender: UIButton) {
+    }
+    // let scene = GameScene(size: skView.frame.size)
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -57,10 +62,16 @@ class GameViewController: UIViewController, MKMapViewDelegate {
     let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
     let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
     
-  //  mapView_background.setRegion(region, animated: true)
+    mapView_background.setRegion(region, animated: true)
   //  mapView_background.mapType = MKMapType.satelliteFlyover
-  //  mapView_background.mapType = MKMapType.satellite
-    mapView_background.mapType = MKMapType.init(rawValue: 2)!
+    mapView_background.mapType = MKMapType.satellite
+ //   mapView_background.mapType = MKMapType.init(rawValue: 2)!
+    //Center of Map
+    let mapCenter = mapView_background.centerCoordinate
+    let POV = CLLocationCoordinate2DMake(latitude, longitude)
+    // Camera
+   // let mapCamera = MKMapCamera.init(lookingAtCenter: mapCenter, fromEyeCoordinate: POV, eyeAltitude: 10)
+   //mapView_background.camera = mapCamera
     
     skView.showsFPS = true
     skView.showsNodeCount = true
@@ -80,7 +91,7 @@ class GameViewController: UIViewController, MKMapViewDelegate {
     NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.handleApplicationDidBecomeActive(_:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
   }
   
-  func loadBackgroundMapUsing(map: Settings.MapSettings) -> MKCoordinateRegion {
+  func loadBackgroundMapUsing(map: Settings.Map) -> MKCoordinateRegion {
     print("Latitude: \(map.latitude)")
     print("Longitude: \(map.longitude)")
     print("Region: \(map.region)")

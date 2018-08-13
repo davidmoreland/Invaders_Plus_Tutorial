@@ -9,10 +9,11 @@
 import UIKit
 import SceneKit
 import MapKit
+import CoreMotion
 
 class Settings: NSObject {
 
-    struct MapSettings {
+    struct Map {
         var latitude: CLLocationDegrees?
         var longitude: CLLocationDegrees?
         var latDelta: CLLocationDegrees?
@@ -56,7 +57,7 @@ class Settings: NSObject {
     }
     
 
-    struct InvaderSettings {
+    struct Invader {
         var numberOfMissles: Int {  willSet { print("Invader-NumberOfMissles NewValue: \(newValue)") } }
         var missleSpeed: Float   {  willSet { print("Invader-MissleSpeed NewValue: \(newValue)") } }
         var firingRate: Float     {  willSet { print("Invader-FiringRate NewValue: \(newValue)") } }
@@ -73,19 +74,26 @@ class Settings: NSObject {
             self.shipRepairTime = shipRepairTime
         }
     }
-        struct DefenderSettings {
-            var numberOfMissles: Int = 5
-            var missleSpeed: Float = 5.0
-            var firingRate: Float =  5.0
-            var shipSpeed: Float = 2.0
-            var shipDamage: Float = 0.0
-            var shipRepairTime: Float = 1.0
+    
+    struct Defender {
+        var numberOfMissles: Int = 5
+        var missleSpeed: Float = 5.0
+        var firingRate: Float =  5.0
+        var shipSpeed: Float = 2.0
+        var shipDamage: Float = 0.0
+        var shipRepairTime: Float = 1.0
+    }
+   
+       struct Game {
+            struct Device {
+                var tiltSensitivity: Double = 1.0
+/*                  { {set: }
+                    {get: tiltSensitivity}
+                    {didSet { print("TiltSensitivity: \(newValue)")}}
+ */
+            }
         }
-        
-        struct GameSettings {
-            
-        }
-        
+ 
         struct PlayerStats {
             var name: String!
             var lastGameTime: TimeInterval = 0
@@ -100,6 +108,8 @@ class Settings: NSObject {
            
         }
     
+    
+    
     enum Altitude: CLLocationDegrees {
         typealias RawValue = CLLocationDegrees
         
@@ -109,7 +119,7 @@ class Settings: NSObject {
         case privateAircraft = 0.30
         case low = 0.10
         case treeTop = 0.01
-        case ground  = 0.000
+        case ground  = 0.00001
     }
     
     var gameScene: GameScene!

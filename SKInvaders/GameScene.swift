@@ -31,10 +31,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 var pause = false;
     var settingsVC : SettingsVC!
-    var settings = Settings()
+   // var settings = Settings()
     
     var defenderShipSpeed :CGFloat = 40.0
-    var tiltSensitivity = 0.5
+    // Moved to 'Setting.Device'
+   // var tiltSensitivity = Settings.Game.Device().tiltSensitivity
     
    // let GameOverScene.gameScene = self
     
@@ -117,8 +118,9 @@ var pause = false;
     let kHealthHudName = "healthHud"
     let kDefenderMissedShotHudName = "missedShotHud"
     var score: Int = 0 {didSet(newValue) {print("Score: \(newValue)") } }
-    var shipHealth: Float = 1.0
-    var missedShotScore: Int = 0
+    var shipHealth: Float = 1.0 {didSet(newValue) {print("ShipHealth: \(newValue)")}}
+    
+    var missedShotScore: Int = 0 {didSet(newValue) {print("Missed: \(newValue)")}}
     
   
     // Scene Setup and Content Creation
@@ -143,6 +145,7 @@ var pause = false;
     // Bit Mask
     physicsBody!.categoryBitMask = kSceneEdgeCategory
     
+    initializeGameData()
     setupInvaders()
     setupShip()
     setupHud()
@@ -206,7 +209,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
     }
     
 
-    determineInvaderMovementDirection()
+   // determineInvaderMovementDirection()
     
 /*    //2: Recall that your scene holds all of the invaders as child nodes; you added them to the scene using addChild() in setupInvaders() identifying each invader by its name property. Invoking enumerateChildNodes(withName:using:) only loops over the invaders because they’re named kInvaderName; this makes the loop skip your ship and the HUDs. The guts of the block moves the invaders 10 pixels either right, left or down depending on the value of invaderMovementDirection.
  */
@@ -269,10 +272,11 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
 /*    //3:   If your device is oriented with the screen facing up and the home button at the bottom, then tilting the device to the right produces data.acceleration.x > 0, whereas tilting it to the left produces data.acceleration.x < 0. The check against 0.2 means that the device will be considered perfectly flat/no thrust (technically data.acceleration.x == 0) as long as it's close enough to zero (data.acceleration.x in the range [-0.2, 0.2]). There's nothing special about 0.2, it just seemed to work well for me. Little tricks like this will make your control system more reliable and less frustrating for users.
  */
                 
-
-             /*   if fabs(data.acceleration.x) > 0.2 {
-               */
-                if fabs(data.acceleration.x) > tiltSensitivity {
+                let deviceTilt = Settings.Game.Device().tiltSensitivity
+                
+                if fabs(data.acceleration.x) > 0.2 {
+ 
+                if fabs(data.acceleration.x) > deviceTilt {
                     
 /* // 4 How fast to move ship.   Hmmm, how do you actually use data.acceleration.x to move the ship? You want small values to move the ship a little and large values to move the ship a lot. For now, you just print out the acceleration value.
 */
@@ -281,15 +285,15 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
  */
         ship.physicsBody!.applyForce(CGVector(dx: defenderShipSpeed * CGFloat(data.acceleration.x),
              dy: 0))
-                    /*
+                    
                     print("Acceleration X: \(data.acceleration.x)")
                     print("Acceleration Y: \(data.acceleration.y)")
- */
+ 
                 }
             }
         }
     }
-    
+    }
     
     
     
@@ -584,7 +588,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             
             //6:  
             fireBullet(bullet: bullet, toDestination: bulletDestination,
-                       withDuration: 2.0, andSOundFileName: "InvaderBullet.wav")
+                       withDuration: 1.0, andSOundFileName: "InvaderBullet.wav")
         }
     }
     }
@@ -665,6 +669,8 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             
             //4A: 
             adjustScore(by: 100)
+                // Increase Health for Successful hit
+                if shipHealth <= 0.90 { adjustShipHealth(by: 0.10) }
             }  // End Defender Bullet --> Invader
         
             else if nodeNames.contains(Bullet().kShipFiredBulletName ) && nodeNames.contains(Bullet().kInvaderFiredBulletName) {
@@ -745,7 +751,15 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             view?.presentScene(gameOverScene, transition: SKTransition.doorsOpenHorizontal(withDuration: 1.0))
         }
     }
-
+        func initializeGameData() {
+           var gameData = Settings.Game()
+           var deviceData = Settings.Game.Device()
+            var playerData = Settings.PlayerStats()
+            var invaderData = Settings.Invader(numMissles: 5, missleSpeed: 5, firingRate: 5, shipSpeed: 5, shipDamage: 0.25, shipRepairTime: 0.20)
+            var defenderData = Settings.Defender()
+            var mapData = Settings.Map()
+            
+        }
           
 }
 
