@@ -32,7 +32,7 @@ class GameOverScene: SKScene {
 
     var gameScene : GameScene!
     var settings : Settings!
-   
+    var score: Int = Settings.PlayerStats().currentGameScore
     
     
     // Scene Setup and Content Creation
@@ -53,13 +53,20 @@ class GameOverScene: SKScene {
         gameOverLabel.text = "Game Over!"
         gameOverLabel.position = CGPoint(x: self.size.width/2, y: 2.0 / 3.0 * self.size.height);
         
+        let gameScoreLabel = SKLabelNode(fontNamed: "Courier")
+        gameScoreLabel.fontSize = 40
+        gameScoreLabel.fontColor = SKColor.white
+        gameScoreLabel.text = String(Settings.PlayerStats().currentGameScore)//as String
+        gameScoreLabel.position = CGPoint(x: self.size.width/2, y: 2.0 / 4.0 * self.size.height);
+        
+        self.addChild(gameScoreLabel)
         self.addChild(gameOverLabel)
         
         let tapLabel = SKLabelNode(fontNamed: "Courier")
         tapLabel.fontSize = 25
         tapLabel.fontColor = SKColor.white
         tapLabel.text = "(Tap to Play Again)"
-        tapLabel.position = CGPoint(x: self.size.width/2, y: gameOverLabel.frame.origin.y - gameOverLabel.frame.size.height - 40);
+        tapLabel.position = CGPoint(x: self.size.width/2, y: gameOverLabel.frame.origin.y - gameOverLabel.frame.size.height - 20);
         
         self.addChild(tapLabel)
         //Display Stats:

@@ -31,7 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 var pause = false;
     var settingsVC : SettingsVC!
-   // var settings = Settings()
+    var settings = Settings()
     
     var defenderShipSpeed :CGFloat = 40.0
     // Moved to 'Setting.Device'
@@ -85,6 +85,7 @@ var pause = false;
     var contactQueue = [SKPhysicsContact]()
 
     var contentCreated = false
+    var dataLoaded = false
     
     // 1: Invaders begin by moving to the right.
     var invaderMovementDirection: InvaderMovementDirection = .right
@@ -94,11 +95,11 @@ var pause = false;
 
  /*  Moved to 'Invader' */
     //3:  Invaders take 1 second for each move. Each step left, right or down takes 1 second.
-    var timePerMove: TimeInterval = 1.0 {didSet {
+    var timePerMove: TimeInterval = 0.70 {didSet {
         print("GameScene:TimePerMove \(timePerMove)") }
     }
 
-  // timePerMove = settings.ShipSpeed(timePerMove)
+  //var timePerMove = settings.ShipSpeed(timePerMove)
  
 // Display Properties
     
@@ -119,7 +120,6 @@ var pause = false;
     let kDefenderMissedShotHudName = "missedShotHud"
     var score: Int = 0 {didSet(newValue) {print("Score: \(newValue)") } }
     var shipHealth: Float = 1.0 {didSet(newValue) {print("ShipHealth: \(newValue)")}}
-    
     var missedShotScore: Int = 0 {didSet(newValue) {print("Missed: \(newValue)")}}
     
   
@@ -132,7 +132,11 @@ var pause = false;
 
         motionManager.startAccelerometerUpdates()
         physicsWorld.contactDelegate = self
-          }
+        if (!self.dataLoaded) {
+            self.initializeGameData()
+            self.dataLoaded = true
+        }
+    }
     }
  
     
@@ -145,7 +149,7 @@ var pause = false;
     // Bit Mask
     physicsBody!.categoryBitMask = kSceneEdgeCategory
     
-    initializeGameData()
+ //   initializeGameData()
     setupInvaders()
     setupShip()
     setupHud()
@@ -209,7 +213,7 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
     }
     
 
-   // determineInvaderMovementDirection()
+    determineInvaderMovementDirection()
     
 /*    //2: Recall that your scene holds all of the invaders as child nodes; you added them to the scene using addChild() in setupInvaders() identifying each invader by its name property. Invoking enumerateChildNodes(withName:using:) only loops over the invaders because they’re named kInvaderName; this makes the loop skip your ship and the HUDs. The guts of the block moves the invaders 10 pixels either right, left or down depending on the value of invaderMovementDirection.
  */
@@ -373,6 +377,8 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
     func adjustShipHealth(by healthAdjustment: Float) {
         //1:  
         shipHealth = max(shipHealth + healthAdjustment, 0)
+        // Update Data
+        
         if let health = childNode(withName: kHealthHudName) as? SKLabelNode {
             health.text = String(format: "Health: %.1f%%", self.shipHealth * 100)
         }
@@ -403,7 +409,6 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
     if isGameOver() {
         endGame()
     }
-    
   }
     
     
@@ -436,8 +441,6 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
         
     }
   
-    
-    
     
   // Invader Movement Helpers
   
@@ -546,15 +549,11 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
             
             //4:  Fire the bullet
                 fireBullet(bullet: bullet, toDestination: bulletDestination, withDuration: 1.0, andSOundFileName: "ShipBullet.wav")
-            
-        
             }
         }
         
         }
 
-    
-    
 
     func fireInvaderBullets(forUpdate currentTime: TimeInterval) {
         let existingBullet = childNode(withName: Bullet().kInvaderFiredBulletName)
@@ -673,11 +672,13 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
                 if shipHealth <= 0.90 { adjustShipHealth(by: 0.10) }
             }  // End Defender Bullet --> Invader
         
+            // Defender Shot Attackers BULLET!
             else if nodeNames.contains(Bullet().kShipFiredBulletName ) && nodeNames.contains(Bullet().kInvaderFiredBulletName) {
                 run(SKAction.playSoundFileNamed("InvaderHit.wav", waitForCompletion: false))
              run(SKAction.playSoundFileNamed("ShipHit.wav", waitForCompletion: false))
                 contact.bodyA.node!.removeFromParent()
                 contact.bodyB.node!.removeFromParent()
+            adjustScore(by: 200)
             }
             
             else if  nodeNames.contains(Hud().kHudName)  && nodeNames.contains(Bullet().kShipFiredBulletName) {
@@ -747,20 +748,42 @@ func moveInvaders(forUpdate currentTime: TimeInterval) {
          
             
             gameOverScene.gameScene = self
+            gameOverScene.score = Settings.PlayerStats().currentGameScore
             
             view?.presentScene(gameOverScene, transition: SKTransition.doorsOpenHorizontal(withDuration: 1.0))
         }
     }
         func initializeGameData() {
-           var gameData = Settings.Game()
-           var deviceData = Settings.Game.Device()
-            var playerData = Settings.PlayerStats()
-            var invaderData = Settings.Invader(numMissles: 5, missleSpeed: 5, firingRate: 5, shipSpeed: 5, shipDamage: 0.25, shipRepairTime: 0.20)
-            var defenderData = Settings.Defender()
-            var mapData = Settings.Map()
+           let gameData = Settings.Game()
+            testing_CreateGameDataArray(gameData: gameData as AnyObject)
+           
+            let deviceData = Settings.Game.Device()
+            testing_CreateGameDataArray(gameData: deviceData as AnyObject)
             
-        }
-          
+            let playerData = Settings.PlayerStats()
+            testing_CreateGameDataArray(gameData: playerData as AnyObject)
+            
+            let invaderData = Settings.Invader(numMissles: 5, missleSpeed: 5, firingRate: 5, shipSpeed: 5, shipDamage: 0.25, shipRepairTime: 0.20)
+            testing_CreateGameDataArray(gameData: invaderData as AnyObject)
+            
+            let defenderData = Settings.Defender()
+            testing_CreateGameDataArray(gameData: defenderData as AnyObject)
+            
+            let mapData = Settings.Map()
+            testing_CreateGameDataArray(gameData: mapData as AnyObject)
+    }
+    
+    func testing_PrintGameData(gameDataArray: [Settings]) {
+    
+        print("Struct -: \(Settings)")
+        print("+++++++++++++++++++++++++++++")
+    }
+    func testing_CreateGameDataArray(gameData: AnyObject) {
+        
+        var gameDataArray: [AnyObject] = []
+         gameDataArray.append(gameData)
+    }
+            
 }
 
 

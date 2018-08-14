@@ -82,6 +82,7 @@ class Settings: NSObject {
         var shipSpeed: Float = 2.0
         var shipDamage: Float = 0.0
         var shipRepairTime: Float = 1.0
+        var shipHealth: Float = 1.0
     }
    
        struct Game {
@@ -96,14 +97,19 @@ class Settings: NSObject {
  
         struct PlayerStats {
             var name: String!
-            var lastGameTime: TimeInterval = 0
+            var currentGameTime: TimeInterval = 0
+            var currentGameScore: Int = 0
             var numDistroyed: Int = 0
             var numMissedShots: Int = 0
             var favoriteLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.7648, longitude: -73.9808)  // New York Citlet           var numOfGamesPlayed: Int = 0
             let bestGameTime: TimeInterval = 0
-            var highletre: Int = 0
-            var totalNumMissedShots: Int = 0
-            var totalNumEnemyDistroyed: Int = 0
+            var highscore: Int = 0
+            var currentTotalNumMissedShots: Int = 0
+            var currentTotalNumEnemyDistroyed: Int = 0
+            var currentNumShotsTaken: Int = 0
+            var lifetimeNumShotsTaken:  Int = 0
+            var lifetimeNumEnemiesDestroyed: Int = 0
+            var lifetimeNumMissedShots: Int = 0
             
            
         }
